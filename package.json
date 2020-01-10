@@ -7,7 +7,7 @@
     "build": "rollup -c",
     "watch": "rollup -cw",
     "prepublishOnly": "npm run build",
-    "format": "prettier --write src/**/*.{js,scss,svelte}"
+    "format": "prettier --write {**/*,*}.{js,scss,svelte}"
   },
   "devDependencies": {
     "@rollup/plugin-node-resolve": "^7.0.0",
@@ -33,7 +33,7 @@
     }
   },
   "lint-staged": {
-    "src/**/*.{js,scss,svelte}": [
+    "{**/*,*}.{js,scss,svelte}": [
       "prettier --write",
       "git add"
     ]
