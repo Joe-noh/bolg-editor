@@ -10,12 +10,12 @@
     "format": "prettier --write src/**/*.{js,scss,svelte}"
   },
   "devDependencies": {
+    "@rollup/plugin-node-resolve": "^7.0.0",
     "husky": "^4.0.6",
     "lint-staged": "^9.5.0",
     "prettier": "^1.19.1",
     "prettier-plugin-svelte": "^0.7.0",
     "rollup": "^1.11.0",
-    "rollup-plugin-node-resolve": "^4.0.0",
     "rollup-plugin-svelte": "^5.0.0",
     "svelte": "^3.0.0"
   },
