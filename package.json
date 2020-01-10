@@ -7,7 +7,7 @@
   "scripts": {
     "build": "rollup -c",
     "watch": "rollup -cw",
-    "serve": "sirv public",
+    "serve": "sirv public --dev",
     "prepublishOnly": "npm run build",
     "format": "prettier --write {**/*,*}.{js,scss,svelte}"
   },
