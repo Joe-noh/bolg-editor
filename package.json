@@ -5,6 +5,7 @@
   "main": "dist/index.umd.js",
   "scripts": {
     "build": "rollup -c",
+    "watch": "rollup -cw",
     "prepublishOnly": "npm run build",
     "format": "prettier --write src/**/*.{js,scss,svelte}"
   },
