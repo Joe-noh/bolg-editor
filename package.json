@@ -9,6 +9,8 @@
     "format": "prettier --write src/**/*.{js,scss,svelte}"
   },
   "devDependencies": {
+    "husky": "^4.0.6",
+    "lint-staged": "^9.5.0",
     "prettier": "^1.19.1",
     "prettier-plugin-svelte": "^0.7.0",
     "rollup": "^1.11.0",
@@ -23,5 +25,16 @@
     "src",
     "index.mjs",
     "index.js"
-  ]
+  ],
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{js,scss,svelte}": [
+      "prettier --write",
+      "git add"
+    ]
+  }
 }
