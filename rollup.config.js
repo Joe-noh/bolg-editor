@@ -28,6 +28,9 @@ export default [
       { file: pkg.main, format: 'umd', name: pkg.name },
     ],
     plugins: [svelte(), resolve()],
+    watch: {
+      clearScreen: false,
+    },
   },
   {
     input: 'src/preview.js',
