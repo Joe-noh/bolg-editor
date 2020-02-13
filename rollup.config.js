@@ -22,15 +22,18 @@ function serve() {
 
 export default [
   {
-    input: 'src/index.svelte',
+    input: 'src/index.js',
     output: [
       { file: pkg.module, format: 'es' },
       { file: pkg.main, format: 'umd', name: pkg.name },
     ],
     plugins: [svelte(), resolve()],
+    watch: {
+      clearScreen: false,
+    },
   },
   {
-    input: 'src/preview.js',
+    input: 'src/preview/index.js',
     output: {
       file: 'public/bundle.js',
       format: 'iife',
