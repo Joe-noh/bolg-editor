@@ -429,23 +429,23 @@ function add_css$2() {
 }
 
 function create_fragment$2(ctx) {
-	let div;
-	let div_class_value;
+	let span;
+	let span_class_value;
 	let current;
 	const default_slot_template = /*$$slots*/ ctx[2].default;
 	const default_slot = create_slot(default_slot_template, ctx, /*$$scope*/ ctx[1], null);
 
 	return {
 		c() {
-			div = element("div");
+			span = element("span");
 			if (default_slot) default_slot.c();
-			attr(div, "class", div_class_value = "text " + `font-${/*font*/ ctx[0]}` + " svelte-1mj6746");
+			attr(span, "class", span_class_value = "text " + `font-${/*font*/ ctx[0]}` + " svelte-1mj6746");
 		},
 		m(target, anchor) {
-			insert(target, div, anchor);
+			insert(target, span, anchor);
 
 			if (default_slot) {
-				default_slot.m(div, null);
+				default_slot.m(span, null);
 			}
 
 			current = true;
@@ -455,8 +455,8 @@ function create_fragment$2(ctx) {
 				default_slot.p(get_slot_context(default_slot_template, ctx, /*$$scope*/ ctx[1], null), get_slot_changes(default_slot_template, /*$$scope*/ ctx[1], dirty, null));
 			}
 
-			if (!current || dirty & /*font*/ 1 && div_class_value !== (div_class_value = "text " + `font-${/*font*/ ctx[0]}` + " svelte-1mj6746")) {
-				attr(div, "class", div_class_value);
+			if (!current || dirty & /*font*/ 1 && span_class_value !== (span_class_value = "text " + `font-${/*font*/ ctx[0]}` + " svelte-1mj6746")) {
+				attr(span, "class", span_class_value);
 			}
 		},
 		i(local) {
@@ -469,7 +469,7 @@ function create_fragment$2(ctx) {
 			current = false;
 		},
 		d(detaching) {
-			if (detaching) detach(div);
+			if (detaching) detach(span);
 			if (default_slot) default_slot.d(detaching);
 		}
 	};

@@ -2,9 +2,9 @@
   export let font = 'sans'
 </script>
 
-<div class="text {`font-${font}`}">
+<span class="text {`font-${font}`}">
   <slot />
-</div>
+</span>
 
 <style>
   .stack {
