@@ -21,7 +21,11 @@ function serve() {
   }
 }
 
-const preprocess = sveltePreprocess({ scss: true })
+const preprocess = sveltePreprocess({
+  scss: {
+    includePaths: ['./src/styles'],
+  },
+})
 
 export default [
   {

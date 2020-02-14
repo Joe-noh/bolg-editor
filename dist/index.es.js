@@ -271,8 +271,8 @@ class SvelteComponent {
 
 function add_css() {
 	var style = element("style");
-	style.id = "svelte-oyu159-style";
-	style.textContent = ".padding-s.svelte-oyu159{padding:8px}.padding-m.svelte-oyu159{padding:16px}.padding-l.svelte-oyu159{padding:24px}";
+	style.id = "svelte-9djlvx-style";
+	style.textContent = ".padding-s.svelte-9djlvx{padding:var(--bolg-spacer-s, 8px)}.padding-m.svelte-9djlvx{padding:var(--bolg-spacer-m, 16px)}.padding-l.svelte-9djlvx{padding:var(--bolg-spacer-l, 24px)}";
 	append(document.head, style);
 }
 
@@ -287,7 +287,7 @@ function create_fragment(ctx) {
 		c() {
 			div = element("div");
 			if (default_slot) default_slot.c();
-			attr(div, "class", div_class_value = "" + (null_to_empty(`padding-${/*padding*/ ctx[0]}`) + " svelte-oyu159"));
+			attr(div, "class", div_class_value = "" + (null_to_empty(`padding-${/*padding*/ ctx[0]}`) + " svelte-9djlvx"));
 		},
 		m(target, anchor) {
 			insert(target, div, anchor);
@@ -303,7 +303,7 @@ function create_fragment(ctx) {
 				default_slot.p(get_slot_context(default_slot_template, ctx, /*$$scope*/ ctx[1], null), get_slot_changes(default_slot_template, /*$$scope*/ ctx[1], dirty, null));
 			}
 
-			if (!current || dirty & /*padding*/ 1 && div_class_value !== (div_class_value = "" + (null_to_empty(`padding-${/*padding*/ ctx[0]}`) + " svelte-oyu159"))) {
+			if (!current || dirty & /*padding*/ 1 && div_class_value !== (div_class_value = "" + (null_to_empty(`padding-${/*padding*/ ctx[0]}`) + " svelte-9djlvx"))) {
 				attr(div, "class", div_class_value);
 			}
 		},
@@ -338,7 +338,7 @@ function instance($$self, $$props, $$invalidate) {
 class Container extends SvelteComponent {
 	constructor(options) {
 		super();
-		if (!document.getElementById("svelte-oyu159-style")) add_css();
+		if (!document.getElementById("svelte-9djlvx-style")) add_css();
 		init(this, options, instance, create_fragment, safe_not_equal, { padding: 0 });
 	}
 }
@@ -347,8 +347,8 @@ class Container extends SvelteComponent {
 
 function add_css$1() {
 	var style = element("style");
-	style.id = "svelte-a2nitn-style";
-	style.textContent = ".stack.svelte-a2nitn{display:grid}.gap-s.svelte-a2nitn{gap:8px}.gap-m.svelte-a2nitn{gap:16px}.gap-l.svelte-a2nitn{gap:24px}";
+	style.id = "svelte-nwdbz-style";
+	style.textContent = ".stack.svelte-nwdbz{display:grid}.gap-s.svelte-nwdbz{gap:var(--bolg-spacer-s, 8px)}.gap-m.svelte-nwdbz{gap:var(--bolg-spacer-m, 16px)}.gap-l.svelte-nwdbz{gap:var(--bolg-spacer-l, 24px)}";
 	append(document.head, style);
 }
 
@@ -363,7 +363,7 @@ function create_fragment$1(ctx) {
 		c() {
 			div = element("div");
 			if (default_slot) default_slot.c();
-			attr(div, "class", div_class_value = "stack " + `gap-${/*gap*/ ctx[0]}` + " svelte-a2nitn");
+			attr(div, "class", div_class_value = "stack " + `gap-${/*gap*/ ctx[0]}` + " svelte-nwdbz");
 		},
 		m(target, anchor) {
 			insert(target, div, anchor);
@@ -379,7 +379,7 @@ function create_fragment$1(ctx) {
 				default_slot.p(get_slot_context(default_slot_template, ctx, /*$$scope*/ ctx[1], null), get_slot_changes(default_slot_template, /*$$scope*/ ctx[1], dirty, null));
 			}
 
-			if (!current || dirty & /*gap*/ 1 && div_class_value !== (div_class_value = "stack " + `gap-${/*gap*/ ctx[0]}` + " svelte-a2nitn")) {
+			if (!current || dirty & /*gap*/ 1 && div_class_value !== (div_class_value = "stack " + `gap-${/*gap*/ ctx[0]}` + " svelte-nwdbz")) {
 				attr(div, "class", div_class_value);
 			}
 		},
@@ -414,7 +414,7 @@ function instance$1($$self, $$props, $$invalidate) {
 class Stack extends SvelteComponent {
 	constructor(options) {
 		super();
-		if (!document.getElementById("svelte-a2nitn-style")) add_css$1();
+		if (!document.getElementById("svelte-nwdbz-style")) add_css$1();
 		init(this, options, instance$1, create_fragment$1, safe_not_equal, { gap: 0 });
 	}
 }
@@ -423,8 +423,8 @@ class Stack extends SvelteComponent {
 
 function add_css$2() {
 	var style = element("style");
-	style.id = "svelte-1sezoiv-style";
-	style.textContent = ".stack.svelte-1sezoiv{color:#222}.font-sans.svelte-1sezoiv{font-family:system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\"}.font-serif.svelte-1sezoiv{font-family:Georgia, Cambria, \"Times New Roman\", Times, serif}.font-mono.svelte-1sezoiv{font-family:Menlo, Monaco, Consolas, \"Liberation Mono\", \"Courier New\", monospace}";
+	style.id = "svelte-2imn8r-style";
+	style.textContent = ".text.svelte-2imn8r{color:var(--bolg-text-color, #222222)}.font-sans.svelte-2imn8r{font-family:var(--bolg-font-family-sans, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\")}.font-serif.svelte-2imn8r{font-family:var(--bolg-font-family-serif, Georgia, Cambria, \"Times New Roman\", Times, serif)}.font-mono.svelte-2imn8r{font-family:var(--bolg-font-family-mono, Menlo, Monaco, Consolas, \"Liberation Mono\", \"Courier New\", monospace)}";
 	append(document.head, style);
 }
 
@@ -439,7 +439,7 @@ function create_fragment$2(ctx) {
 		c() {
 			span = element("span");
 			if (default_slot) default_slot.c();
-			attr(span, "class", span_class_value = "text " + `font-${/*font*/ ctx[0]}` + " svelte-1sezoiv");
+			attr(span, "class", span_class_value = "text " + `font-${/*font*/ ctx[0]}` + " svelte-2imn8r");
 		},
 		m(target, anchor) {
 			insert(target, span, anchor);
@@ -455,7 +455,7 @@ function create_fragment$2(ctx) {
 				default_slot.p(get_slot_context(default_slot_template, ctx, /*$$scope*/ ctx[1], null), get_slot_changes(default_slot_template, /*$$scope*/ ctx[1], dirty, null));
 			}
 
-			if (!current || dirty & /*font*/ 1 && span_class_value !== (span_class_value = "text " + `font-${/*font*/ ctx[0]}` + " svelte-1sezoiv")) {
+			if (!current || dirty & /*font*/ 1 && span_class_value !== (span_class_value = "text " + `font-${/*font*/ ctx[0]}` + " svelte-2imn8r")) {
 				attr(span, "class", span_class_value);
 			}
 		},
@@ -490,7 +490,7 @@ function instance$2($$self, $$props, $$invalidate) {
 class Text extends SvelteComponent {
 	constructor(options) {
 		super();
-		if (!document.getElementById("svelte-1sezoiv-style")) add_css$2();
+		if (!document.getElementById("svelte-2imn8r-style")) add_css$2();
 		init(this, options, instance$2, create_fragment$2, safe_not_equal, { font: 0 });
 	}
 }

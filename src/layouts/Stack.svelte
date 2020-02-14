@@ -7,16 +7,18 @@
 </div>
 
 <style lang="scss">
+  @import 'variables.scss';
+
   .stack {
     display: grid;
   }
   .gap-s {
-    gap: 8px;
+    gap: $spacer-s;
   }
   .gap-m {
-    gap: 16px;
+    gap: $spacer-m;
   }
   .gap-l {
-    gap: 24px;
+    gap: $spacer-l;
   }
 </style>
