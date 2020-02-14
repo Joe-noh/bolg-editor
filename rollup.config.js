@@ -1,6 +1,7 @@
 import { spawn } from 'child_process'
 import svelte from 'rollup-plugin-svelte'
 import resolve from '@rollup/plugin-node-resolve'
+import sveltePreprocess from 'svelte-preprocess'
 import pkg from './package.json'
 
 function serve() {
@@ -20,6 +21,8 @@ function serve() {
   }
 }
 
+const preprocess = sveltePreprocess({ scss: true })
+
 export default [
   {
     input: 'src/index.js',
@@ -27,7 +30,7 @@ export default [
       { file: pkg.module, format: 'es' },
       { file: pkg.main, format: 'umd', name: pkg.name },
     ],
-    plugins: [svelte(), resolve()],
+    plugins: [svelte({ preprocess }), resolve()],
     watch: {
       clearScreen: false,
     },
@@ -39,6 +42,6 @@ export default [
       format: 'iife',
       name: 'preview',
     },
-    plugins: [svelte({ dev: true }), resolve({ browser: true }), serve()],
+    plugins: [svelte({ preprocess, dev: true }), resolve({ browser: true }), serve()],
   },
 ]

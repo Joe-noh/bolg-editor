@@ -6,7 +6,7 @@
   <slot />
 </div>
 
-<style>
+<style lang="scss">
   .stack {
     display: grid;
   }

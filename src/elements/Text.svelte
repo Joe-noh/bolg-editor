@@ -6,7 +6,7 @@
   <slot />
 </span>
 
-<style>
+<style lang="scss">
   .stack {
     color: #222;
   }

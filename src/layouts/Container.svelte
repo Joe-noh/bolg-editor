@@ -6,7 +6,7 @@
   <slot />
 </div>
 
-<style>
+<style lang="scss">
   .padding-s {
     padding: 8px;
   }

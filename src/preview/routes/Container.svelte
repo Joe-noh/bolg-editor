@@ -20,7 +20,7 @@
   </div>
 </Stack>
 
-<style>
+<style lang="scss">
   .bordered {
     border: solid 1px #222;
   }
