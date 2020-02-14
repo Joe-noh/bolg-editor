@@ -6,18 +6,19 @@
   <slot />
 </span>
 
-<style>
-  .stack {
-    color: #222;
+<style lang="scss">
+  @import 'variables.scss';
+
+  .text {
+    color: $main-text-color;
   }
   .font-sans {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji',
-      'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    font-family: $font-family-sans;
   }
   .font-serif {
-    font-family: Georgia, Cambria, 'Times New Roman', Times, serif;
+    font-family: $font-family-serif;
   }
   .font-mono {
-    font-family: Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+    font-family: $font-family-mono;
   }
 </style>

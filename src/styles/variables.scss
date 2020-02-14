@@ -1,0 +1,26 @@
+$spacer-xs: var(--bolg-spacer-xs, 4px);
+$spacer-s: var(--bolg-spacer-s, 8px);
+$spacer-m: var(--bolg-spacer-m, 16px);
+$spacer-l: var(--bolg-spacer-l, 24px);
+$spacer-xl: var(--bolg-spacer-xl, 32px);
+
+$main-text-color: var(--bolg-text-color, #222222);
+
+$font-family-sans: var(
+  --bolg-font-family-sans,
+  system-ui,
+  -apple-system,
+  BlinkMacSystemFont,
+  'Segoe UI',
+  Roboto,
+  'Helvetica Neue',
+  Arial,
+  'Noto Sans',
+  sans-serif,
+  'Apple Color Emoji',
+  'Segoe UI Emoji',
+  'Segoe UI Symbol',
+  'Noto Color Emoji'
+);
+$font-family-serif: var(--bolg-font-family-serif, Georgia, Cambria, 'Times New Roman', Times, serif);
+$font-family-mono: var(--bolg-font-family-mono, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace);

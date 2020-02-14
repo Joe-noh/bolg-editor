@@ -6,14 +6,16 @@
   <slot />
 </div>
 
-<style>
+<style lang="scss">
+  @import 'variables.scss';
+
   .padding-s {
-    padding: 8px;
+    padding: $spacer-s;
   }
   .padding-m {
-    padding: 16px;
+    padding: $spacer-m;
   }
   .padding-l {
-    padding: 24px;
+    padding: $spacer-l;
   }
 </style>
