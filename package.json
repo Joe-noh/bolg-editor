@@ -7,14 +7,23 @@
   "scripts": {
     "build": "rollup -c",
     "watch": "rollup -cw",
+    "test": "jest src",
+    "test:watch": "jest src --watch",
     "serve": "sirv public --dev",
     "prepublishOnly": "npm run build",
     "format": "prettier --write {**/*,*}.{js,scss,svelte}"
   },
   "devDependencies": {
+    "@babel/core": "^7.8.4",
+    "@babel/preset-env": "^7.8.4",
     "@rollup/plugin-node-resolve": "^7.0.0",
+    "@testing-library/jest-dom": "^5.1.1",
+    "@testing-library/svelte": "^1.11.0",
     "autoprefixer": "^9.7.4",
+    "babel-jest": "^25.1.0",
     "husky": "^4.0.6",
+    "jest": "^25.1.0",
+    "jest-transform-svelte": "^2.1.1",
     "lint-staged": "^9.5.0",
     "prettier": "^1.19.1",
     "prettier-plugin-svelte": "^0.7.0",
