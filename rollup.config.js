@@ -1,8 +1,6 @@
 import { spawn } from 'child_process'
 import svelte from 'rollup-plugin-svelte'
 import resolve from '@rollup/plugin-node-resolve'
-import sveltePreprocess from 'svelte-preprocess'
-import autoprefixer from 'autoprefixer'
 import pkg from './package.json'
 
 function serve() {
@@ -22,14 +20,7 @@ function serve() {
   }
 }
 
-const preprocess = sveltePreprocess({
-  scss: {
-    includePaths: ['./src/styles'],
-  },
-  postcss: {
-    plugins: [autoprefixer],
-  },
-})
+const { preprocess } = require('./svelte.config.js')
 
 export default [
   {
