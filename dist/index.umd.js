@@ -68,6 +68,12 @@
     function element(name) {
         return document.createElement(name);
     }
+    function text(data) {
+        return document.createTextNode(data);
+    }
+    function empty() {
+        return text('');
+    }
     function attr(node, attribute, value) {
         if (value == null)
             node.removeAttribute(attribute);
@@ -277,8 +283,8 @@
 
     function add_css() {
     	var style = element("style");
-    	style.id = "svelte-9djlvx-style";
-    	style.textContent = ".padding-s.svelte-9djlvx{padding:var(--bolg-spacer-s, 8px)}.padding-m.svelte-9djlvx{padding:var(--bolg-spacer-m, 16px)}.padding-l.svelte-9djlvx{padding:var(--bolg-spacer-l, 24px)}";
+    	style.id = "svelte-122jbc9-style";
+    	style.textContent = ".padding-s.svelte-122jbc9{padding:var(--bolg-spacer-s, 8px)}.padding-m.svelte-122jbc9{padding:var(--bolg-spacer-m, 16px)}.padding-l.svelte-122jbc9{padding:var(--bolg-spacer-l, 24px)}";
     	append(document.head, style);
     }
 
@@ -293,7 +299,7 @@
     		c() {
     			div = element("div");
     			if (default_slot) default_slot.c();
-    			attr(div, "class", div_class_value = "" + (null_to_empty(`padding-${/*padding*/ ctx[0]}`) + " svelte-9djlvx"));
+    			attr(div, "class", div_class_value = "" + (null_to_empty(`padding-${/*padding*/ ctx[0]}`) + " svelte-122jbc9"));
     		},
     		m(target, anchor) {
     			insert(target, div, anchor);
@@ -309,7 +315,7 @@
     				default_slot.p(get_slot_context(default_slot_template, ctx, /*$$scope*/ ctx[1], null), get_slot_changes(default_slot_template, /*$$scope*/ ctx[1], dirty, null));
     			}
 
-    			if (!current || dirty & /*padding*/ 1 && div_class_value !== (div_class_value = "" + (null_to_empty(`padding-${/*padding*/ ctx[0]}`) + " svelte-9djlvx"))) {
+    			if (!current || dirty & /*padding*/ 1 && div_class_value !== (div_class_value = "" + (null_to_empty(`padding-${/*padding*/ ctx[0]}`) + " svelte-122jbc9"))) {
     				attr(div, "class", div_class_value);
     			}
     		},
@@ -344,7 +350,7 @@
     class Container extends SvelteComponent {
     	constructor(options) {
     		super();
-    		if (!document.getElementById("svelte-9djlvx-style")) add_css();
+    		if (!document.getElementById("svelte-122jbc9-style")) add_css();
     		init(this, options, instance, create_fragment, safe_not_equal, { padding: 0 });
     	}
     }
@@ -353,8 +359,8 @@
 
     function add_css$1() {
     	var style = element("style");
-    	style.id = "svelte-nwdbz-style";
-    	style.textContent = ".stack.svelte-nwdbz{display:grid}.gap-s.svelte-nwdbz{gap:var(--bolg-spacer-s, 8px)}.gap-m.svelte-nwdbz{gap:var(--bolg-spacer-m, 16px)}.gap-l.svelte-nwdbz{gap:var(--bolg-spacer-l, 24px)}";
+    	style.id = "svelte-1rsob8l-style";
+    	style.textContent = ".stack.svelte-1rsob8l{display:grid}.gap-s.svelte-1rsob8l{gap:var(--bolg-spacer-s, 8px)}.gap-m.svelte-1rsob8l{gap:var(--bolg-spacer-m, 16px)}.gap-l.svelte-1rsob8l{gap:var(--bolg-spacer-l, 24px)}";
     	append(document.head, style);
     }
 
@@ -369,7 +375,7 @@
     		c() {
     			div = element("div");
     			if (default_slot) default_slot.c();
-    			attr(div, "class", div_class_value = "stack " + `gap-${/*gap*/ ctx[0]}` + " svelte-nwdbz");
+    			attr(div, "class", div_class_value = "stack " + `gap-${/*gap*/ ctx[0]}` + " svelte-1rsob8l");
     		},
     		m(target, anchor) {
     			insert(target, div, anchor);
@@ -385,7 +391,7 @@
     				default_slot.p(get_slot_context(default_slot_template, ctx, /*$$scope*/ ctx[1], null), get_slot_changes(default_slot_template, /*$$scope*/ ctx[1], dirty, null));
     			}
 
-    			if (!current || dirty & /*gap*/ 1 && div_class_value !== (div_class_value = "stack " + `gap-${/*gap*/ ctx[0]}` + " svelte-nwdbz")) {
+    			if (!current || dirty & /*gap*/ 1 && div_class_value !== (div_class_value = "stack " + `gap-${/*gap*/ ctx[0]}` + " svelte-1rsob8l")) {
     				attr(div, "class", div_class_value);
     			}
     		},
@@ -420,7 +426,7 @@
     class Stack extends SvelteComponent {
     	constructor(options) {
     		super();
-    		if (!document.getElementById("svelte-nwdbz-style")) add_css$1();
+    		if (!document.getElementById("svelte-1rsob8l-style")) add_css$1();
     		init(this, options, instance$1, create_fragment$1, safe_not_equal, { gap: 0 });
     	}
     }
@@ -429,8 +435,8 @@
 
     function add_css$2() {
     	var style = element("style");
-    	style.id = "svelte-2imn8r-style";
-    	style.textContent = ".text.svelte-2imn8r{color:var(--bolg-text-color, #222222)}.font-sans.svelte-2imn8r{font-family:var(--bolg-font-family-sans, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\")}.font-serif.svelte-2imn8r{font-family:var(--bolg-font-family-serif, Georgia, Cambria, \"Times New Roman\", Times, serif)}.font-mono.svelte-2imn8r{font-family:var(--bolg-font-family-mono, Menlo, Monaco, Consolas, \"Liberation Mono\", \"Courier New\", monospace)}";
+    	style.id = "svelte-c6jvxj-style";
+    	style.textContent = ".text.svelte-c6jvxj{color:var(--bolg-text-color, #222222)}.font-sans.svelte-c6jvxj{font-family:var(--bolg-font-family-sans, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\")}.font-serif.svelte-c6jvxj{font-family:var(--bolg-font-family-serif, Georgia, Cambria, \"Times New Roman\", Times, serif)}.font-mono.svelte-c6jvxj{font-family:var(--bolg-font-family-mono, Menlo, Monaco, Consolas, \"Liberation Mono\", \"Courier New\", monospace)}";
     	append(document.head, style);
     }
 
@@ -445,7 +451,7 @@
     		c() {
     			span = element("span");
     			if (default_slot) default_slot.c();
-    			attr(span, "class", span_class_value = "text " + `font-${/*font*/ ctx[0]}` + " svelte-2imn8r");
+    			attr(span, "class", span_class_value = "text " + `font-${/*font*/ ctx[0]}` + " svelte-c6jvxj");
     		},
     		m(target, anchor) {
     			insert(target, span, anchor);
@@ -461,7 +467,7 @@
     				default_slot.p(get_slot_context(default_slot_template, ctx, /*$$scope*/ ctx[1], null), get_slot_changes(default_slot_template, /*$$scope*/ ctx[1], dirty, null));
     			}
 
-    			if (!current || dirty & /*font*/ 1 && span_class_value !== (span_class_value = "text " + `font-${/*font*/ ctx[0]}` + " svelte-2imn8r")) {
+    			if (!current || dirty & /*font*/ 1 && span_class_value !== (span_class_value = "text " + `font-${/*font*/ ctx[0]}` + " svelte-c6jvxj")) {
     				attr(span, "class", span_class_value);
     			}
     		},
@@ -496,12 +502,327 @@
     class Text extends SvelteComponent {
     	constructor(options) {
     		super();
-    		if (!document.getElementById("svelte-2imn8r-style")) add_css$2();
+    		if (!document.getElementById("svelte-c6jvxj-style")) add_css$2();
     		init(this, options, instance$2, create_fragment$2, safe_not_equal, { font: 0 });
     	}
     }
 
+    /* src/elements/Heading.svelte generated by Svelte v3.16.7 */
+
+    function add_css$3() {
+    	var style = element("style");
+    	style.id = "svelte-jp3yo6-style";
+    	style.textContent = ".heading.svelte-jp3yo6{margin:0;color:var(--bolg-text-color, #222222);font-family:var(--bolg-font-family-sans, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\");font-weight:bold}.heading--1.svelte-jp3yo6{font-size:var(--bolg-heading-font-size-1, 28px)}.heading--2.svelte-jp3yo6{font-size:var(--bolg-heading-font-size-2, 24px)}.heading--3.svelte-jp3yo6{font-size:var(--bolg-heading-font-size-3, 20px)}.heading--4.svelte-jp3yo6{font-size:var(--bolg-heading-font-size-4, 18px)}.heading--5.svelte-jp3yo6{font-size:var(--bolg-heading-font-size-5, 16px)}";
+    	append(document.head, style);
+    }
+
+    // (15:29) 
+    function create_if_block_4(ctx) {
+    	let h5;
+    	let h5_class_value;
+    	let current;
+    	const default_slot_template = /*$$slots*/ ctx[3].default;
+    	const default_slot = create_slot(default_slot_template, ctx, /*$$scope*/ ctx[2], null);
+
+    	return {
+    		c() {
+    			h5 = element("h5");
+    			if (default_slot) default_slot.c();
+    			attr(h5, "class", h5_class_value = "heading " + `heading--${/*headingLevel*/ ctx[0]}` + " svelte-jp3yo6");
+    		},
+    		m(target, anchor) {
+    			insert(target, h5, anchor);
+
+    			if (default_slot) {
+    				default_slot.m(h5, null);
+    			}
+
+    			current = true;
+    		},
+    		p(ctx, dirty) {
+    			if (default_slot && default_slot.p && dirty & /*$$scope*/ 4) {
+    				default_slot.p(get_slot_context(default_slot_template, ctx, /*$$scope*/ ctx[2], null), get_slot_changes(default_slot_template, /*$$scope*/ ctx[2], dirty, null));
+    			}
+    		},
+    		i(local) {
+    			if (current) return;
+    			transition_in(default_slot, local);
+    			current = true;
+    		},
+    		o(local) {
+    			transition_out(default_slot, local);
+    			current = false;
+    		},
+    		d(detaching) {
+    			if (detaching) detach(h5);
+    			if (default_slot) default_slot.d(detaching);
+    		}
+    	};
+    }
+
+    // (13:29) 
+    function create_if_block_3(ctx) {
+    	let h4;
+    	let h4_class_value;
+    	let current;
+    	const default_slot_template = /*$$slots*/ ctx[3].default;
+    	const default_slot = create_slot(default_slot_template, ctx, /*$$scope*/ ctx[2], null);
+
+    	return {
+    		c() {
+    			h4 = element("h4");
+    			if (default_slot) default_slot.c();
+    			attr(h4, "class", h4_class_value = "heading " + `heading--${/*headingLevel*/ ctx[0]}` + " svelte-jp3yo6");
+    		},
+    		m(target, anchor) {
+    			insert(target, h4, anchor);
+
+    			if (default_slot) {
+    				default_slot.m(h4, null);
+    			}
+
+    			current = true;
+    		},
+    		p(ctx, dirty) {
+    			if (default_slot && default_slot.p && dirty & /*$$scope*/ 4) {
+    				default_slot.p(get_slot_context(default_slot_template, ctx, /*$$scope*/ ctx[2], null), get_slot_changes(default_slot_template, /*$$scope*/ ctx[2], dirty, null));
+    			}
+    		},
+    		i(local) {
+    			if (current) return;
+    			transition_in(default_slot, local);
+    			current = true;
+    		},
+    		o(local) {
+    			transition_out(default_slot, local);
+    			current = false;
+    		},
+    		d(detaching) {
+    			if (detaching) detach(h4);
+    			if (default_slot) default_slot.d(detaching);
+    		}
+    	};
+    }
+
+    // (11:29) 
+    function create_if_block_2(ctx) {
+    	let h3;
+    	let h3_class_value;
+    	let current;
+    	const default_slot_template = /*$$slots*/ ctx[3].default;
+    	const default_slot = create_slot(default_slot_template, ctx, /*$$scope*/ ctx[2], null);
+
+    	return {
+    		c() {
+    			h3 = element("h3");
+    			if (default_slot) default_slot.c();
+    			attr(h3, "class", h3_class_value = "heading " + `heading--${/*headingLevel*/ ctx[0]}` + " svelte-jp3yo6");
+    		},
+    		m(target, anchor) {
+    			insert(target, h3, anchor);
+
+    			if (default_slot) {
+    				default_slot.m(h3, null);
+    			}
+
+    			current = true;
+    		},
+    		p(ctx, dirty) {
+    			if (default_slot && default_slot.p && dirty & /*$$scope*/ 4) {
+    				default_slot.p(get_slot_context(default_slot_template, ctx, /*$$scope*/ ctx[2], null), get_slot_changes(default_slot_template, /*$$scope*/ ctx[2], dirty, null));
+    			}
+    		},
+    		i(local) {
+    			if (current) return;
+    			transition_in(default_slot, local);
+    			current = true;
+    		},
+    		o(local) {
+    			transition_out(default_slot, local);
+    			current = false;
+    		},
+    		d(detaching) {
+    			if (detaching) detach(h3);
+    			if (default_slot) default_slot.d(detaching);
+    		}
+    	};
+    }
+
+    // (9:29) 
+    function create_if_block_1(ctx) {
+    	let h2;
+    	let h2_class_value;
+    	let current;
+    	const default_slot_template = /*$$slots*/ ctx[3].default;
+    	const default_slot = create_slot(default_slot_template, ctx, /*$$scope*/ ctx[2], null);
+
+    	return {
+    		c() {
+    			h2 = element("h2");
+    			if (default_slot) default_slot.c();
+    			attr(h2, "class", h2_class_value = "heading " + `heading--${/*headingLevel*/ ctx[0]}` + " svelte-jp3yo6");
+    		},
+    		m(target, anchor) {
+    			insert(target, h2, anchor);
+
+    			if (default_slot) {
+    				default_slot.m(h2, null);
+    			}
+
+    			current = true;
+    		},
+    		p(ctx, dirty) {
+    			if (default_slot && default_slot.p && dirty & /*$$scope*/ 4) {
+    				default_slot.p(get_slot_context(default_slot_template, ctx, /*$$scope*/ ctx[2], null), get_slot_changes(default_slot_template, /*$$scope*/ ctx[2], dirty, null));
+    			}
+    		},
+    		i(local) {
+    			if (current) return;
+    			transition_in(default_slot, local);
+    			current = true;
+    		},
+    		o(local) {
+    			transition_out(default_slot, local);
+    			current = false;
+    		},
+    		d(detaching) {
+    			if (detaching) detach(h2);
+    			if (default_slot) default_slot.d(detaching);
+    		}
+    	};
+    }
+
+    // (7:0) {#if headingLevel === 1}
+    function create_if_block(ctx) {
+    	let h1;
+    	let h1_class_value;
+    	let current;
+    	const default_slot_template = /*$$slots*/ ctx[3].default;
+    	const default_slot = create_slot(default_slot_template, ctx, /*$$scope*/ ctx[2], null);
+
+    	return {
+    		c() {
+    			h1 = element("h1");
+    			if (default_slot) default_slot.c();
+    			attr(h1, "class", h1_class_value = "heading " + `heading--${/*headingLevel*/ ctx[0]}` + " svelte-jp3yo6");
+    		},
+    		m(target, anchor) {
+    			insert(target, h1, anchor);
+
+    			if (default_slot) {
+    				default_slot.m(h1, null);
+    			}
+
+    			current = true;
+    		},
+    		p(ctx, dirty) {
+    			if (default_slot && default_slot.p && dirty & /*$$scope*/ 4) {
+    				default_slot.p(get_slot_context(default_slot_template, ctx, /*$$scope*/ ctx[2], null), get_slot_changes(default_slot_template, /*$$scope*/ ctx[2], dirty, null));
+    			}
+    		},
+    		i(local) {
+    			if (current) return;
+    			transition_in(default_slot, local);
+    			current = true;
+    		},
+    		o(local) {
+    			transition_out(default_slot, local);
+    			current = false;
+    		},
+    		d(detaching) {
+    			if (detaching) detach(h1);
+    			if (default_slot) default_slot.d(detaching);
+    		}
+    	};
+    }
+
+    function create_fragment$3(ctx) {
+    	let current_block_type_index;
+    	let if_block;
+    	let if_block_anchor;
+    	let current;
+
+    	const if_block_creators = [
+    		create_if_block,
+    		create_if_block_1,
+    		create_if_block_2,
+    		create_if_block_3,
+    		create_if_block_4
+    	];
+
+    	const if_blocks = [];
+
+    	function select_block_type(ctx, dirty) {
+    		if (/*headingLevel*/ ctx[0] === 1) return 0;
+    		if (/*headingLevel*/ ctx[0] === 2) return 1;
+    		if (/*headingLevel*/ ctx[0] === 3) return 2;
+    		if (/*headingLevel*/ ctx[0] === 4) return 3;
+    		if (/*headingLevel*/ ctx[0] === 5) return 4;
+    		return -1;
+    	}
+
+    	if (~(current_block_type_index = select_block_type(ctx))) {
+    		if_block = if_blocks[current_block_type_index] = if_block_creators[current_block_type_index](ctx);
+    	}
+
+    	return {
+    		c() {
+    			if (if_block) if_block.c();
+    			if_block_anchor = empty();
+    		},
+    		m(target, anchor) {
+    			if (~current_block_type_index) {
+    				if_blocks[current_block_type_index].m(target, anchor);
+    			}
+
+    			insert(target, if_block_anchor, anchor);
+    			current = true;
+    		},
+    		p(ctx, [dirty]) {
+    			if_block.p(ctx, dirty);
+    		},
+    		i(local) {
+    			if (current) return;
+    			transition_in(if_block);
+    			current = true;
+    		},
+    		o(local) {
+    			transition_out(if_block);
+    			current = false;
+    		},
+    		d(detaching) {
+    			if (~current_block_type_index) {
+    				if_blocks[current_block_type_index].d(detaching);
+    			}
+
+    			if (detaching) detach(if_block_anchor);
+    		}
+    	};
+    }
+
+    function instance$3($$self, $$props, $$invalidate) {
+    	let { level = 1 } = $$props;
+    	const headingLevel = +level;
+    	let { $$slots = {}, $$scope } = $$props;
+
+    	$$self.$set = $$props => {
+    		if ("level" in $$props) $$invalidate(1, level = $$props.level);
+    		if ("$$scope" in $$props) $$invalidate(2, $$scope = $$props.$$scope);
+    	};
+
+    	return [headingLevel, level, $$scope, $$slots];
+    }
+
+    class Heading extends SvelteComponent {
+    	constructor(options) {
+    		super();
+    		if (!document.getElementById("svelte-jp3yo6-style")) add_css$3();
+    		init(this, options, instance$3, create_fragment$3, safe_not_equal, { level: 1 });
+    	}
+    }
+
     exports.Container = Container;
+    exports.Heading = Heading;
     exports.Stack = Stack;
     exports.Text = Text;
 
