@@ -838,8 +838,8 @@
 
     function add_css$4() {
     	var style = element("style");
-    	style.id = "svelte-822o74-style";
-    	style.textContent = ".button.svelte-822o74{cursor:pointer;border:none;font-weight:500;font-size:14px;padding:8px 16px}.type-filled.svelte-822o74{border:none}.type-filled.tone-success.svelte-822o74{color:white;background-color:var(--bolg-success-color, #48bb78);border:solid 2px var(--bolg-success-color, #48bb78)}.type-filled.tone-warning.svelte-822o74{color:var(--bolg-text-color, #222222);background-color:var(--bolg-warning-color, #f9db59);border:solid 2px var(--bolg-warning-color, #f9db59)}.type-filled.tone-critical.svelte-822o74{color:white;background-color:var(--bolg-critical-color, #e53d3d);border:solid 2px var(--bolg-critical-color, #e53d3d)}.type-outlined.tone-success.svelte-822o74{color:var(--bolg-success-color, #48bb78);border:solid 2px var(--bolg-success-color, #48bb78)}.type-outlined.tone-warning.svelte-822o74{color:var(--bolg-warning-color, #f9db59);border:solid 2px var(--bolg-warning-color, #f9db59)}.type-outlined.tone-critical.svelte-822o74{color:var(--bolg-critical-color, #e53d3d);border:solid 2px var(--bolg-critical-color, #e53d3d)}";
+    	style.id = "svelte-tr10k1-style";
+    	style.textContent = ".button.svelte-tr10k1{cursor:pointer;border:none;font-weight:500;font-size:14px;padding:8px 16px;min-width:100px}.type-filled.svelte-tr10k1{border:none}.type-filled.tone-success.svelte-tr10k1{color:white;background-color:var(--bolg-success-color, #48bb78);border:solid 2px var(--bolg-success-color, #48bb78)}.type-filled.tone-warning.svelte-tr10k1{color:var(--bolg-text-color, #222222);background-color:var(--bolg-warning-color, #f9db59);border:solid 2px var(--bolg-warning-color, #f9db59)}.type-filled.tone-critical.svelte-tr10k1{color:white;background-color:var(--bolg-critical-color, #e53d3d);border:solid 2px var(--bolg-critical-color, #e53d3d)}.type-outlined.tone-success.svelte-tr10k1{color:var(--bolg-success-color, #48bb78);border:solid 2px var(--bolg-success-color, #48bb78)}.type-outlined.tone-warning.svelte-tr10k1{color:var(--bolg-warning-color, #f9db59);border:solid 2px var(--bolg-warning-color, #f9db59)}.type-outlined.tone-critical.svelte-tr10k1{color:var(--bolg-critical-color, #e53d3d);border:solid 2px var(--bolg-critical-color, #e53d3d)}";
     	append(document.head, style);
     }
 
@@ -855,7 +855,7 @@
     		c() {
     			button = element("button");
     			if (default_slot) default_slot.c();
-    			attr(button, "class", button_class_value = "button " + `tone-${/*tone*/ ctx[0]}` + " " + `type-${/*type*/ ctx[1]}` + " svelte-822o74");
+    			attr(button, "class", button_class_value = "button " + `tone-${/*tone*/ ctx[0]}` + " " + `type-${/*type*/ ctx[1]}` + " svelte-tr10k1");
     			dispose = listen(button, "click", /*click_handler*/ ctx[4]);
     		},
     		m(target, anchor) {
@@ -872,7 +872,7 @@
     				default_slot.p(get_slot_context(default_slot_template, ctx, /*$$scope*/ ctx[2], null), get_slot_changes(default_slot_template, /*$$scope*/ ctx[2], dirty, null));
     			}
 
-    			if (!current || dirty & /*tone, type*/ 3 && button_class_value !== (button_class_value = "button " + `tone-${/*tone*/ ctx[0]}` + " " + `type-${/*type*/ ctx[1]}` + " svelte-822o74")) {
+    			if (!current || dirty & /*tone, type*/ 3 && button_class_value !== (button_class_value = "button " + `tone-${/*tone*/ ctx[0]}` + " " + `type-${/*type*/ ctx[1]}` + " svelte-tr10k1")) {
     				attr(button, "class", button_class_value);
     			}
     		},
@@ -914,7 +914,7 @@
     class Button extends SvelteComponent {
     	constructor(options) {
     		super();
-    		if (!document.getElementById("svelte-822o74-style")) add_css$4();
+    		if (!document.getElementById("svelte-tr10k1-style")) add_css$4();
     		init(this, options, instance$4, create_fragment$4, safe_not_equal, { tone: 0, type: 1 });
     	}
     }
