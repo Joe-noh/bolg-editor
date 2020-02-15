@@ -8,4 +8,7 @@
   <li>
     <a href="#/container">Container</a>
   </li>
+  <li>
+    <a href="#/button">Button</a>
+  </li>
 </ul>
