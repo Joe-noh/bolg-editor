@@ -832,8 +832,8 @@ class Heading extends SvelteComponent {
 
 function add_css$4() {
 	var style = element("style");
-	style.id = "svelte-tr10k1-style";
-	style.textContent = ".button.svelte-tr10k1{cursor:pointer;border:none;font-weight:500;font-size:14px;padding:8px 16px;min-width:100px}.type-filled.svelte-tr10k1{border:none}.type-filled.tone-success.svelte-tr10k1{color:white;background-color:var(--bolg-success-color, #48bb78);border:solid 2px var(--bolg-success-color, #48bb78)}.type-filled.tone-warning.svelte-tr10k1{color:var(--bolg-text-color, #222222);background-color:var(--bolg-warning-color, #f9db59);border:solid 2px var(--bolg-warning-color, #f9db59)}.type-filled.tone-critical.svelte-tr10k1{color:white;background-color:var(--bolg-critical-color, #e53d3d);border:solid 2px var(--bolg-critical-color, #e53d3d)}.type-outlined.tone-success.svelte-tr10k1{color:var(--bolg-success-color, #48bb78);border:solid 2px var(--bolg-success-color, #48bb78)}.type-outlined.tone-warning.svelte-tr10k1{color:var(--bolg-warning-color, #f9db59);border:solid 2px var(--bolg-warning-color, #f9db59)}.type-outlined.tone-critical.svelte-tr10k1{color:var(--bolg-critical-color, #e53d3d);border:solid 2px var(--bolg-critical-color, #e53d3d)}";
+	style.id = "svelte-awgdmu-style";
+	style.textContent = ".button.svelte-awgdmu{cursor:pointer;border:none;font-weight:500;font-size:14px;padding:8px 16px;min-width:100px}.type-filled.svelte-awgdmu{border:none}.type-filled.tone-info.svelte-awgdmu{color:white;background-color:var(--bolg-info-color, #209cee);border:solid 2px var(--bolg-info-color, #209cee)}.type-filled.tone-success.svelte-awgdmu{color:white;background-color:var(--bolg-success-color, #48bb78);border:solid 2px var(--bolg-success-color, #48bb78)}.type-filled.tone-warning.svelte-awgdmu{color:var(--bolg-text-color, #222222);background-color:var(--bolg-warning-color, #f9db59);border:solid 2px var(--bolg-warning-color, #f9db59)}.type-filled.tone-critical.svelte-awgdmu{color:white;background-color:var(--bolg-critical-color, #ef3d3d);border:solid 2px var(--bolg-critical-color, #ef3d3d)}.type-filled.tone-info.svelte-awgdmu:disabled,.type-filled.tone-success.svelte-awgdmu:disabled,.type-filled.tone-warning.svelte-awgdmu:disabled,.type-filled.tone-critical.svelte-awgdmu:disabled{color:white;background-color:var(--bolg-disabled-color, #999999);border:solid 2px var(--bolg-disabled-color, #999999)}.type-outlined.svelte-awgdmu{background-color:white}.type-outlined.tone-info.svelte-awgdmu{color:var(--bolg-info-color, #209cee);border:solid 2px var(--bolg-info-color, #209cee)}.type-outlined.tone-success.svelte-awgdmu{color:var(--bolg-success-color, #48bb78);border:solid 2px var(--bolg-success-color, #48bb78)}.type-outlined.tone-warning.svelte-awgdmu{color:var(--bolg-warning-color, #f9db59);border:solid 2px var(--bolg-warning-color, #f9db59)}.type-outlined.tone-critical.svelte-awgdmu{color:var(--bolg-critical-color, #ef3d3d);border:solid 2px var(--bolg-critical-color, #ef3d3d)}.type-outlined.tone-info.svelte-awgdmu:disabled,.type-outlined.tone-success.svelte-awgdmu:disabled,.type-outlined.tone-warning.svelte-awgdmu:disabled,.type-outlined.tone-critical.svelte-awgdmu:disabled{color:var(--bolg-disabled-color, #999999);border:solid 2px var(--bolg-disabled-color, #999999)}";
 	append(document.head, style);
 }
 
@@ -842,15 +842,16 @@ function create_fragment$4(ctx) {
 	let button_class_value;
 	let current;
 	let dispose;
-	const default_slot_template = /*$$slots*/ ctx[3].default;
-	const default_slot = create_slot(default_slot_template, ctx, /*$$scope*/ ctx[2], null);
+	const default_slot_template = /*$$slots*/ ctx[4].default;
+	const default_slot = create_slot(default_slot_template, ctx, /*$$scope*/ ctx[3], null);
 
 	return {
 		c() {
 			button = element("button");
 			if (default_slot) default_slot.c();
-			attr(button, "class", button_class_value = "button " + `tone-${/*tone*/ ctx[0]}` + " " + `type-${/*type*/ ctx[1]}` + " svelte-tr10k1");
-			dispose = listen(button, "click", /*click_handler*/ ctx[4]);
+			attr(button, "class", button_class_value = "button " + `tone-${/*tone*/ ctx[0]}` + " " + `type-${/*type*/ ctx[1]}` + " svelte-awgdmu");
+			button.disabled = /*disabled*/ ctx[2];
+			dispose = listen(button, "click", /*click_handler*/ ctx[5]);
 		},
 		m(target, anchor) {
 			insert(target, button, anchor);
@@ -862,12 +863,16 @@ function create_fragment$4(ctx) {
 			current = true;
 		},
 		p(ctx, [dirty]) {
-			if (default_slot && default_slot.p && dirty & /*$$scope*/ 4) {
-				default_slot.p(get_slot_context(default_slot_template, ctx, /*$$scope*/ ctx[2], null), get_slot_changes(default_slot_template, /*$$scope*/ ctx[2], dirty, null));
+			if (default_slot && default_slot.p && dirty & /*$$scope*/ 8) {
+				default_slot.p(get_slot_context(default_slot_template, ctx, /*$$scope*/ ctx[3], null), get_slot_changes(default_slot_template, /*$$scope*/ ctx[3], dirty, null));
 			}
 
-			if (!current || dirty & /*tone, type*/ 3 && button_class_value !== (button_class_value = "button " + `tone-${/*tone*/ ctx[0]}` + " " + `type-${/*type*/ ctx[1]}` + " svelte-tr10k1")) {
+			if (!current || dirty & /*tone, type*/ 3 && button_class_value !== (button_class_value = "button " + `tone-${/*tone*/ ctx[0]}` + " " + `type-${/*type*/ ctx[1]}` + " svelte-awgdmu")) {
 				attr(button, "class", button_class_value);
+			}
+
+			if (!current || dirty & /*disabled*/ 4) {
+				button.disabled = /*disabled*/ ctx[2];
 			}
 		},
 		i(local) {
@@ -888,8 +893,9 @@ function create_fragment$4(ctx) {
 }
 
 function instance$4($$self, $$props, $$invalidate) {
-	let { tone } = $$props;
+	let { tone = "info" } = $$props;
 	let { type = "filled" } = $$props;
+	let { disabled = false } = $$props;
 	let { $$slots = {}, $$scope } = $$props;
 
 	function click_handler(event) {
@@ -899,17 +905,18 @@ function instance$4($$self, $$props, $$invalidate) {
 	$$self.$set = $$props => {
 		if ("tone" in $$props) $$invalidate(0, tone = $$props.tone);
 		if ("type" in $$props) $$invalidate(1, type = $$props.type);
-		if ("$$scope" in $$props) $$invalidate(2, $$scope = $$props.$$scope);
+		if ("disabled" in $$props) $$invalidate(2, disabled = $$props.disabled);
+		if ("$$scope" in $$props) $$invalidate(3, $$scope = $$props.$$scope);
 	};
 
-	return [tone, type, $$scope, $$slots, click_handler];
+	return [tone, type, disabled, $$scope, $$slots, click_handler];
 }
 
 class Button extends SvelteComponent {
 	constructor(options) {
 		super();
-		if (!document.getElementById("svelte-tr10k1-style")) add_css$4();
-		init(this, options, instance$4, create_fragment$4, safe_not_equal, { tone: 0, type: 1 });
+		if (!document.getElementById("svelte-awgdmu-style")) add_css$4();
+		init(this, options, instance$4, create_fragment$4, safe_not_equal, { tone: 0, type: 1, disabled: 2 });
 	}
 }
 
