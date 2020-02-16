@@ -14,6 +14,9 @@
   <Stack gap="m">
     <Stack gap="s">
       <span>
+        <Button tone="info" type="filled" on:click="{show('Filled info clicked')}">Filled info</Button>
+      </span>
+      <span>
         <Button tone="success" type="filled" on:click="{show('Filled success clicked')}">Filled success</Button>
       </span>
       <span>
@@ -25,6 +28,9 @@
     </Stack>
 
     <Stack gap="s">
+      <span>
+        <Button tone="info" type="outlined" on:click="{show('Outlined info clicked')}">Outlined info</Button>
+      </span>
       <span>
         <Button tone="success" type="outlined" on:click="{show('Outlined success clicked')}">Outlined success</Button>
       </span>

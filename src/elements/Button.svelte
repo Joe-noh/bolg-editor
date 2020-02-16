@@ -1,5 +1,5 @@
 <script>
-  export let tone
+  export let tone = 'info'
   export let type = 'filled'
 </script>
 
@@ -22,6 +22,11 @@
   .type-filled {
     border: none;
   }
+  .type-filled.tone-info {
+    color: white;
+    background-color: $info-color;
+    border: solid 2px $info-color;
+  }
   .type-filled.tone-success {
     color: white;
     background-color: $success-color;
@@ -38,6 +43,10 @@
     border: solid 2px $critical-color;
   }
 
+  .type-outlined.tone-info {
+    color: $info-color;
+    border: solid 2px $info-color;
+  }
   .type-outlined.tone-success {
     color: $success-color;
     border: solid 2px $success-color;
