@@ -1,17 +1,21 @@
+<script>
+  import { Link } from '../../'
+</script>
+
 <ul>
   <li>
-    <a href="#/colors">Colors</a>
+    <Link href="/#/colors">Colors</Link>
   </li>
   <li>
-    <a href="#/heading">Heading</a>
+    <Link href="/#/heading">Heading</Link>
   </li>
   <li>
-    <a href="#/container">Container</a>
+    <Link href="/#/container">Container</Link>
   </li>
   <li>
-    <a href="#/button">Button</a>
+    <Link href="/#/button">Button</Link>
   </li>
   <li>
-    <a href="#/textfield">TextField</a>
+    <Link href="/#/textfield">TextField</Link>
   </li>
 </ul>
