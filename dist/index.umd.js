@@ -456,8 +456,8 @@
 
     function add_css$1() {
     	var style = element("style");
-    	style.id = "svelte-1rsob8l-style";
-    	style.textContent = ".stack.svelte-1rsob8l{display:grid}.gap-s.svelte-1rsob8l{gap:var(--bolg-spacer-s, 8px)}.gap-m.svelte-1rsob8l{gap:var(--bolg-spacer-m, 16px)}.gap-l.svelte-1rsob8l{gap:var(--bolg-spacer-l, 24px)}";
+    	style.id = "svelte-ktgev0-style";
+    	style.textContent = ".stack.svelte-ktgev0{display:grid;width:100%;box-sizing:border-box}.gap-s.svelte-ktgev0{gap:var(--bolg-spacer-s, 8px)}.gap-m.svelte-ktgev0{gap:var(--bolg-spacer-m, 16px)}.gap-l.svelte-ktgev0{gap:var(--bolg-spacer-l, 24px)}.padding-none.svelte-ktgev0{padding:0}.padding-s.svelte-ktgev0{padding:var(--bolg-spacer-s, 8px)}.padding-m.svelte-ktgev0{padding:var(--bolg-spacer-m, 16px)}.padding-l.svelte-ktgev0{padding:var(--bolg-spacer-l, 24px)}";
     	append(document.head, style);
     }
 
@@ -465,14 +465,14 @@
     	let div;
     	let div_class_value;
     	let current;
-    	const default_slot_template = /*$$slots*/ ctx[2].default;
-    	const default_slot = create_slot(default_slot_template, ctx, /*$$scope*/ ctx[1], null);
+    	const default_slot_template = /*$$slots*/ ctx[3].default;
+    	const default_slot = create_slot(default_slot_template, ctx, /*$$scope*/ ctx[2], null);
 
     	return {
     		c() {
     			div = element("div");
     			if (default_slot) default_slot.c();
-    			attr(div, "class", div_class_value = "stack " + `gap-${/*gap*/ ctx[0]}` + " svelte-1rsob8l");
+    			attr(div, "class", div_class_value = "stack " + `gap-${/*gap*/ ctx[0]}` + " " + `padding-${/*padding*/ ctx[1]}` + " svelte-ktgev0");
     		},
     		m(target, anchor) {
     			insert(target, div, anchor);
@@ -484,11 +484,11 @@
     			current = true;
     		},
     		p(ctx, [dirty]) {
-    			if (default_slot && default_slot.p && dirty & /*$$scope*/ 2) {
-    				default_slot.p(get_slot_context(default_slot_template, ctx, /*$$scope*/ ctx[1], null), get_slot_changes(default_slot_template, /*$$scope*/ ctx[1], dirty, null));
+    			if (default_slot && default_slot.p && dirty & /*$$scope*/ 4) {
+    				default_slot.p(get_slot_context(default_slot_template, ctx, /*$$scope*/ ctx[2], null), get_slot_changes(default_slot_template, /*$$scope*/ ctx[2], dirty, null));
     			}
 
-    			if (!current || dirty & /*gap*/ 1 && div_class_value !== (div_class_value = "stack " + `gap-${/*gap*/ ctx[0]}` + " svelte-1rsob8l")) {
+    			if (!current || dirty & /*gap, padding*/ 3 && div_class_value !== (div_class_value = "stack " + `gap-${/*gap*/ ctx[0]}` + " " + `padding-${/*padding*/ ctx[1]}` + " svelte-ktgev0")) {
     				attr(div, "class", div_class_value);
     			}
     		},
@@ -510,21 +510,23 @@
 
     function instance$1($$self, $$props, $$invalidate) {
     	let { gap = "m" } = $$props;
+    	let { padding = "none" } = $$props;
     	let { $$slots = {}, $$scope } = $$props;
 
     	$$self.$set = $$props => {
     		if ("gap" in $$props) $$invalidate(0, gap = $$props.gap);
-    		if ("$$scope" in $$props) $$invalidate(1, $$scope = $$props.$$scope);
+    		if ("padding" in $$props) $$invalidate(1, padding = $$props.padding);
+    		if ("$$scope" in $$props) $$invalidate(2, $$scope = $$props.$$scope);
     	};
 
-    	return [gap, $$scope, $$slots];
+    	return [gap, padding, $$scope, $$slots];
     }
 
     class Stack extends SvelteComponent {
     	constructor(options) {
     		super();
-    		if (!document.getElementById("svelte-1rsob8l-style")) add_css$1();
-    		init(this, options, instance$1, create_fragment$1, safe_not_equal, { gap: 0 });
+    		if (!document.getElementById("svelte-ktgev0-style")) add_css$1();
+    		init(this, options, instance$1, create_fragment$1, safe_not_equal, { gap: 0, padding: 1 });
     	}
     }
 

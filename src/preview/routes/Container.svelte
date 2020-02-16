@@ -2,7 +2,7 @@
   import { Container, Stack, Text } from '../../'
 </script>
 
-<Stack gap="m">
+<Stack gap="m" padding="m">
   <div class="bordered">
     <Container padding="s">
       <Text font="sans">Hello from S padding Container</Text>
