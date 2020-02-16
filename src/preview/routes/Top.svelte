@@ -11,4 +11,7 @@
   <li>
     <a href="#/button">Button</a>
   </li>
+  <li>
+    <a href="#/textfield">TextField</a>
+  </li>
 </ul>

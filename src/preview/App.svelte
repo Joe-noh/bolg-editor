@@ -5,6 +5,7 @@
   import Heading from './routes/Heading.svelte'
   import Container from './routes/Container.svelte'
   import Button from './routes/Button.svelte'
+  import TextField from './routes/TextField.svelte'
 
   const routes = {
     '/': Top,
@@ -12,6 +13,7 @@
     '/heading': Heading,
     '/container': Container,
     '/button': Button,
+    '/textfield': TextField,
   }
 </script>
 
