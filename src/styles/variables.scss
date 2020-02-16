@@ -11,6 +11,10 @@ $warning-color: var(--bolg-warning-color, #f9db59);
 $critical-color: var(--bolg-critical-color, #ef3d3d);
 $disabled-color: var(--bolg-disabled-color, #999999);
 
+$text-font-size-s: var(--bolg-text-font-size-s, 14px);
+$text-font-size-m: var(--bolg-text-font-size-m, 16px);
+$text-font-size-l: var(--bolg-text-font-size-l, 18px);
+
 $heading-font-size-5: var(--bolg-heading-font-size-5, 16px);
 $heading-font-size-4: var(--bolg-heading-font-size-4, 18px);
 $heading-font-size-3: var(--bolg-heading-font-size-3, 20px);
