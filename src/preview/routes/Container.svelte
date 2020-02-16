@@ -1,5 +1,16 @@
 <script>
-  import { Container, Stack, Text } from '../../'
+  import { Container, Stack, Text, CodeBlock } from '../../'
+
+  const code = `
+<Stack gap="m" padding="m">
+  <div></div>
+  <div></div>
+</Stack>
+
+<Container padding="s">
+  <div></div>
+</Container>
+  `.trim()
 </script>
 
 <Stack gap="m" padding="m">
@@ -18,6 +29,8 @@
       <Text font="sans">Hello from L padding Container</Text>
     </Container>
   </div>
+
+  <CodeBlock {code} />
 </Stack>
 
 <style lang="scss">

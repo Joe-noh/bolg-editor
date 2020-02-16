@@ -6,5 +6,6 @@ import Heading from './elements/Heading.svelte'
 import Button from './elements/Button.svelte'
 import TextField from './elements/TextField.svelte'
 import Link from './elements/Link.svelte'
+import CodeBlock from './elements/CodeBlock.svelte'
 
-export { Container, Stack, Text, Heading, Button, TextField, Link }
+export { Container, Stack, Text, Heading, Button, TextField, Link, CodeBlock }

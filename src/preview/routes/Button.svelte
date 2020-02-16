@@ -1,7 +1,12 @@
 <script>
-  import { Container, Stack, Button } from '../../'
+  import { Container, Stack, Button, CodeBlock } from '../../'
 
   let message = ''
+  const code = `
+<Button tone="info" type="filled">Press</Button>
+<Button tone="critical" type="outlined">Press</Button>
+<Button disabled>Disabled</Button>
+  `.trim()
 
   function show(msg) {
     return event => {
@@ -73,5 +78,7 @@
     </Stack>
 
     <span>{message}</span>
+
+    <CodeBlock {code} />
   </Stack>
 </Container>
