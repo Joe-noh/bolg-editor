@@ -65,6 +65,9 @@ function element(name) {
 function text(data) {
     return document.createTextNode(data);
 }
+function space() {
+    return text(' ');
+}
 function empty() {
     return text('');
 }
@@ -80,6 +83,16 @@ function attr(node, attribute, value) {
 }
 function children(element) {
     return Array.from(element.childNodes);
+}
+function set_data(text, data) {
+    data = '' + data;
+    if (text.data !== data)
+        text.data = data;
+}
+function set_input_value(input, value) {
+    if (value != null || input.value) {
+        input.value = value;
+    }
 }
 
 let current_component;
@@ -153,6 +166,19 @@ function update($$) {
 }
 const outroing = new Set();
 let outros;
+function group_outros() {
+    outros = {
+        r: 0,
+        c: [],
+        p: outros // parent group
+    };
+}
+function check_outros() {
+    if (!outros.r) {
+        run_all(outros.c);
+    }
+    outros = outros.p;
+}
 function transition_in(block, local) {
     if (block && block.i) {
         outroing.delete(block);
@@ -174,6 +200,9 @@ function transition_out(block, local, detach, callback) {
         });
         block.o(local);
     }
+}
+function create_component(block) {
+    block && block.c();
 }
 function mount_component(component, target, anchor) {
     const { fragment, on_mount, on_destroy, after_update } = component.$$;
@@ -442,8 +471,8 @@ class Stack extends SvelteComponent {
 
 function add_css$2() {
 	var style = element("style");
-	style.id = "svelte-c6jvxj-style";
-	style.textContent = ".text.svelte-c6jvxj{color:var(--bolg-text-color, #222222)}.font-sans.svelte-c6jvxj{font-family:var(--bolg-font-family-sans, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\")}.font-serif.svelte-c6jvxj{font-family:var(--bolg-font-family-serif, Georgia, Cambria, \"Times New Roman\", Times, serif)}.font-mono.svelte-c6jvxj{font-family:var(--bolg-font-family-mono, Menlo, Monaco, Consolas, \"Liberation Mono\", \"Courier New\", monospace)}";
+	style.id = "svelte-10pz97j-style";
+	style.textContent = ".text.font-sans.svelte-10pz97j{font-family:var(--bolg-font-family-sans, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, \"Noto Sans\", sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\")}.text.font-serif.svelte-10pz97j{font-family:var(--bolg-font-family-serif, Georgia, Cambria, \"Times New Roman\", Times, serif)}.text.font-mono.svelte-10pz97j{font-family:var(--bolg-font-family-mono, Menlo, Monaco, Consolas, \"Liberation Mono\", \"Courier New\", monospace)}.text.tone-normal.svelte-10pz97j{color:var(--bolg-text-color, #222222)}.text.tone-success.svelte-10pz97j{color:var(--bolg-success-color, #48bb78)}.text.tone-critical.svelte-10pz97j{color:var(--bolg-critical-color, #ef3d3d)}.text.size-s.svelte-10pz97j{font-size:var(--bolg-text-font-size-s, 14px)}.text.size-m.svelte-10pz97j{font-size:var(--bolg-text-font-size-m, 16px)}.text.size-l.svelte-10pz97j{font-size:var(--bolg-text-font-size-l, 18px)}";
 	append(document.head, style);
 }
 
@@ -451,14 +480,14 @@ function create_fragment$2(ctx) {
 	let span;
 	let span_class_value;
 	let current;
-	const default_slot_template = /*$$slots*/ ctx[2].default;
-	const default_slot = create_slot(default_slot_template, ctx, /*$$scope*/ ctx[1], null);
+	const default_slot_template = /*$$slots*/ ctx[4].default;
+	const default_slot = create_slot(default_slot_template, ctx, /*$$scope*/ ctx[3], null);
 
 	return {
 		c() {
 			span = element("span");
 			if (default_slot) default_slot.c();
-			attr(span, "class", span_class_value = "text " + `font-${/*font*/ ctx[0]}` + " svelte-c6jvxj");
+			attr(span, "class", span_class_value = "text " + `font-${/*font*/ ctx[0]}` + " " + `tone-${/*tone*/ ctx[1]}` + " " + `size-${/*size*/ ctx[2]}` + " svelte-10pz97j");
 		},
 		m(target, anchor) {
 			insert(target, span, anchor);
@@ -470,11 +499,11 @@ function create_fragment$2(ctx) {
 			current = true;
 		},
 		p(ctx, [dirty]) {
-			if (default_slot && default_slot.p && dirty & /*$$scope*/ 2) {
-				default_slot.p(get_slot_context(default_slot_template, ctx, /*$$scope*/ ctx[1], null), get_slot_changes(default_slot_template, /*$$scope*/ ctx[1], dirty, null));
+			if (default_slot && default_slot.p && dirty & /*$$scope*/ 8) {
+				default_slot.p(get_slot_context(default_slot_template, ctx, /*$$scope*/ ctx[3], null), get_slot_changes(default_slot_template, /*$$scope*/ ctx[3], dirty, null));
 			}
 
-			if (!current || dirty & /*font*/ 1 && span_class_value !== (span_class_value = "text " + `font-${/*font*/ ctx[0]}` + " svelte-c6jvxj")) {
+			if (!current || dirty & /*font, tone, size*/ 7 && span_class_value !== (span_class_value = "text " + `font-${/*font*/ ctx[0]}` + " " + `tone-${/*tone*/ ctx[1]}` + " " + `size-${/*size*/ ctx[2]}` + " svelte-10pz97j")) {
 				attr(span, "class", span_class_value);
 			}
 		},
@@ -496,21 +525,25 @@ function create_fragment$2(ctx) {
 
 function instance$2($$self, $$props, $$invalidate) {
 	let { font = "sans" } = $$props;
+	let { tone = "normal" } = $$props;
+	let { size = "m" } = $$props;
 	let { $$slots = {}, $$scope } = $$props;
 
 	$$self.$set = $$props => {
 		if ("font" in $$props) $$invalidate(0, font = $$props.font);
-		if ("$$scope" in $$props) $$invalidate(1, $$scope = $$props.$$scope);
+		if ("tone" in $$props) $$invalidate(1, tone = $$props.tone);
+		if ("size" in $$props) $$invalidate(2, size = $$props.size);
+		if ("$$scope" in $$props) $$invalidate(3, $$scope = $$props.$$scope);
 	};
 
-	return [font, $$scope, $$slots];
+	return [font, tone, size, $$scope, $$slots];
 }
 
 class Text extends SvelteComponent {
 	constructor(options) {
 		super();
-		if (!document.getElementById("svelte-c6jvxj-style")) add_css$2();
-		init(this, options, instance$2, create_fragment$2, safe_not_equal, { font: 0 });
+		if (!document.getElementById("svelte-10pz97j-style")) add_css$2();
+		init(this, options, instance$2, create_fragment$2, safe_not_equal, { font: 0, tone: 1, size: 2 });
 	}
 }
 
@@ -920,4 +953,279 @@ class Button extends SvelteComponent {
 	}
 }
 
-export { Button, Container, Heading, Stack, Text };
+/* src/elements/TextField.svelte generated by Svelte v3.16.7 */
+
+function add_css$5() {
+	var style = element("style");
+	style.id = "svelte-1r23qy8-style";
+	style.textContent = ".text-field.svelte-1r23qy8{display:flex;flex-flow:column nowrap;color:var(--bolg-text-color, #222222)}.label.svelte-1r23qy8{margin-bottom:var(--bolg-spacer-xs, 4px)}.input.svelte-1r23qy8{width:100%;font-size:16px;padding:var(--bolg-spacer-s, 8px);box-sizing:border-box}.input.input-tone-normal.svelte-1r23qy8{border:solid 1px var(--bold-border-color, #888888)}.input.input-tone-success.svelte-1r23qy8{border:solid 1px var(--bolg-success-color, #48bb78)}.input.input-tone-critical.svelte-1r23qy8{border:solid 1px var(--bolg-critical-color, #ef3d3d)}";
+	append(document.head, style);
+}
+
+// (11:2) {#if label}
+function create_if_block_1$1(ctx) {
+	let div;
+	let current;
+
+	const text_1 = new Text({
+			props: {
+				$$slots: { default: [create_default_slot_1] },
+				$$scope: { ctx }
+			}
+		});
+
+	return {
+		c() {
+			div = element("div");
+			create_component(text_1.$$.fragment);
+			attr(div, "class", "label svelte-1r23qy8");
+		},
+		m(target, anchor) {
+			insert(target, div, anchor);
+			mount_component(text_1, div, null);
+			current = true;
+		},
+		p(ctx, dirty) {
+			const text_1_changes = {};
+
+			if (dirty & /*$$scope, label*/ 40) {
+				text_1_changes.$$scope = { dirty, ctx };
+			}
+
+			text_1.$set(text_1_changes);
+		},
+		i(local) {
+			if (current) return;
+			transition_in(text_1.$$.fragment, local);
+			current = true;
+		},
+		o(local) {
+			transition_out(text_1.$$.fragment, local);
+			current = false;
+		},
+		d(detaching) {
+			if (detaching) detach(div);
+			destroy_component(text_1);
+		}
+	};
+}
+
+// (13:6) <Text>
+function create_default_slot_1(ctx) {
+	let t;
+
+	return {
+		c() {
+			t = text(/*label*/ ctx[3]);
+		},
+		m(target, anchor) {
+			insert(target, t, anchor);
+		},
+		p(ctx, dirty) {
+			if (dirty & /*label*/ 8) set_data(t, /*label*/ ctx[3]);
+		},
+		d(detaching) {
+			if (detaching) detach(t);
+		}
+	};
+}
+
+// (17:2) {#if message}
+function create_if_block$1(ctx) {
+	let current;
+
+	const text_1 = new Text({
+			props: {
+				tone: /*tone*/ ctx[1],
+				size: "s",
+				$$slots: { default: [create_default_slot] },
+				$$scope: { ctx }
+			}
+		});
+
+	return {
+		c() {
+			create_component(text_1.$$.fragment);
+		},
+		m(target, anchor) {
+			mount_component(text_1, target, anchor);
+			current = true;
+		},
+		p(ctx, dirty) {
+			const text_1_changes = {};
+			if (dirty & /*tone*/ 2) text_1_changes.tone = /*tone*/ ctx[1];
+
+			if (dirty & /*$$scope, message*/ 36) {
+				text_1_changes.$$scope = { dirty, ctx };
+			}
+
+			text_1.$set(text_1_changes);
+		},
+		i(local) {
+			if (current) return;
+			transition_in(text_1.$$.fragment, local);
+			current = true;
+		},
+		o(local) {
+			transition_out(text_1.$$.fragment, local);
+			current = false;
+		},
+		d(detaching) {
+			destroy_component(text_1, detaching);
+		}
+	};
+}
+
+// (18:4) <Text {tone} size="s">
+function create_default_slot(ctx) {
+	let t;
+
+	return {
+		c() {
+			t = text(/*message*/ ctx[2]);
+		},
+		m(target, anchor) {
+			insert(target, t, anchor);
+		},
+		p(ctx, dirty) {
+			if (dirty & /*message*/ 4) set_data(t, /*message*/ ctx[2]);
+		},
+		d(detaching) {
+			if (detaching) detach(t);
+		}
+	};
+}
+
+function create_fragment$5(ctx) {
+	let label_1;
+	let t0;
+	let input;
+	let input_class_value;
+	let t1;
+	let current;
+	let dispose;
+	let if_block0 = /*label*/ ctx[3] && create_if_block_1$1(ctx);
+	let if_block1 = /*message*/ ctx[2] && create_if_block$1(ctx);
+
+	return {
+		c() {
+			label_1 = element("label");
+			if (if_block0) if_block0.c();
+			t0 = space();
+			input = element("input");
+			t1 = space();
+			if (if_block1) if_block1.c();
+			attr(input, "class", input_class_value = "input " + `input-tone-${/*tone*/ ctx[1]}` + " svelte-1r23qy8");
+			attr(input, "type", "text");
+			attr(label_1, "class", "text-field svelte-1r23qy8");
+			dispose = listen(input, "input", /*input_input_handler*/ ctx[4]);
+		},
+		m(target, anchor) {
+			insert(target, label_1, anchor);
+			if (if_block0) if_block0.m(label_1, null);
+			append(label_1, t0);
+			append(label_1, input);
+			set_input_value(input, /*value*/ ctx[0]);
+			append(label_1, t1);
+			if (if_block1) if_block1.m(label_1, null);
+			current = true;
+		},
+		p(ctx, [dirty]) {
+			if (/*label*/ ctx[3]) {
+				if (if_block0) {
+					if_block0.p(ctx, dirty);
+					transition_in(if_block0, 1);
+				} else {
+					if_block0 = create_if_block_1$1(ctx);
+					if_block0.c();
+					transition_in(if_block0, 1);
+					if_block0.m(label_1, t0);
+				}
+			} else if (if_block0) {
+				group_outros();
+
+				transition_out(if_block0, 1, 1, () => {
+					if_block0 = null;
+				});
+
+				check_outros();
+			}
+
+			if (!current || dirty & /*tone*/ 2 && input_class_value !== (input_class_value = "input " + `input-tone-${/*tone*/ ctx[1]}` + " svelte-1r23qy8")) {
+				attr(input, "class", input_class_value);
+			}
+
+			if (dirty & /*value*/ 1 && input.value !== /*value*/ ctx[0]) {
+				set_input_value(input, /*value*/ ctx[0]);
+			}
+
+			if (/*message*/ ctx[2]) {
+				if (if_block1) {
+					if_block1.p(ctx, dirty);
+					transition_in(if_block1, 1);
+				} else {
+					if_block1 = create_if_block$1(ctx);
+					if_block1.c();
+					transition_in(if_block1, 1);
+					if_block1.m(label_1, null);
+				}
+			} else if (if_block1) {
+				group_outros();
+
+				transition_out(if_block1, 1, 1, () => {
+					if_block1 = null;
+				});
+
+				check_outros();
+			}
+		},
+		i(local) {
+			if (current) return;
+			transition_in(if_block0);
+			transition_in(if_block1);
+			current = true;
+		},
+		o(local) {
+			transition_out(if_block0);
+			transition_out(if_block1);
+			current = false;
+		},
+		d(detaching) {
+			if (detaching) detach(label_1);
+			if (if_block0) if_block0.d();
+			if (if_block1) if_block1.d();
+			dispose();
+		}
+	};
+}
+
+function instance$5($$self, $$props, $$invalidate) {
+	let { tone = "normal" } = $$props;
+	let { message = null } = $$props;
+	let { label = null } = $$props;
+	let { value = "" } = $$props;
+
+	function input_input_handler() {
+		value = this.value;
+		$$invalidate(0, value);
+	}
+
+	$$self.$set = $$props => {
+		if ("tone" in $$props) $$invalidate(1, tone = $$props.tone);
+		if ("message" in $$props) $$invalidate(2, message = $$props.message);
+		if ("label" in $$props) $$invalidate(3, label = $$props.label);
+		if ("value" in $$props) $$invalidate(0, value = $$props.value);
+	};
+
+	return [value, tone, message, label, input_input_handler];
+}
+
+class TextField extends SvelteComponent {
+	constructor(options) {
+		super();
+		if (!document.getElementById("svelte-1r23qy8-style")) add_css$5();
+		init(this, options, instance$5, create_fragment$5, safe_not_equal, { tone: 1, message: 2, label: 3, value: 0 });
+	}
+}
+
+export { Button, Container, Heading, Stack, Text, TextField };
