@@ -6,6 +6,7 @@
   import Container from './routes/Container.svelte'
   import Button from './routes/Button.svelte'
   import TextField from './routes/TextField.svelte'
+  import Textarea from './routes/Textarea.svelte'
 
   const routes = {
     '/': Top,
@@ -14,6 +15,7 @@
     '/container': Container,
     '/button': Button,
     '/textfield': TextField,
+    '/textarea': Textarea,
   }
 </script>
 
