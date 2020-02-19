@@ -18,6 +18,8 @@
   .pre {
     margin: 0;
     padding: $spacer-m;
+    box-sizing: border-box;
+    overflow-x: scroll;
   }
   .code {
     font-size: $text-font-size-s;

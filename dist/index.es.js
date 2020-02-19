@@ -450,8 +450,8 @@ class Container extends SvelteComponent {
 
 function add_css$1() {
 	var style = element("style");
-	style.id = "svelte-ktgev0-style";
-	style.textContent = ".stack.svelte-ktgev0{display:grid;width:100%;box-sizing:border-box}.gap-s.svelte-ktgev0{gap:var(--bolg-spacer-s, 8px)}.gap-m.svelte-ktgev0{gap:var(--bolg-spacer-m, 16px)}.gap-l.svelte-ktgev0{gap:var(--bolg-spacer-l, 24px)}.padding-none.svelte-ktgev0{padding:0}.padding-s.svelte-ktgev0{padding:var(--bolg-spacer-s, 8px)}.padding-m.svelte-ktgev0{padding:var(--bolg-spacer-m, 16px)}.padding-l.svelte-ktgev0{padding:var(--bolg-spacer-l, 24px)}";
+	style.id = "svelte-1en4j8n-style";
+	style.textContent = ".stack.svelte-1en4j8n{display:grid;width:100%;box-sizing:border-box;grid-auto-columns:100%}.gap-s.svelte-1en4j8n{gap:var(--bolg-spacer-s, 8px)}.gap-m.svelte-1en4j8n{gap:var(--bolg-spacer-m, 16px)}.gap-l.svelte-1en4j8n{gap:var(--bolg-spacer-l, 24px)}.padding-none.svelte-1en4j8n{padding:0}.padding-s.svelte-1en4j8n{padding:var(--bolg-spacer-s, 8px)}.padding-m.svelte-1en4j8n{padding:var(--bolg-spacer-m, 16px)}.padding-l.svelte-1en4j8n{padding:var(--bolg-spacer-l, 24px)}";
 	append(document.head, style);
 }
 
@@ -466,7 +466,7 @@ function create_fragment$1(ctx) {
 		c() {
 			div = element("div");
 			if (default_slot) default_slot.c();
-			attr(div, "class", div_class_value = "stack " + `gap-${/*gap*/ ctx[0]}` + " " + `padding-${/*padding*/ ctx[1]}` + " svelte-ktgev0");
+			attr(div, "class", div_class_value = "stack " + `gap-${/*gap*/ ctx[0]}` + " " + `padding-${/*padding*/ ctx[1]}` + " svelte-1en4j8n");
 		},
 		m(target, anchor) {
 			insert(target, div, anchor);
@@ -482,7 +482,7 @@ function create_fragment$1(ctx) {
 				default_slot.p(get_slot_context(default_slot_template, ctx, /*$$scope*/ ctx[2], null), get_slot_changes(default_slot_template, /*$$scope*/ ctx[2], dirty, null));
 			}
 
-			if (!current || dirty & /*gap, padding*/ 3 && div_class_value !== (div_class_value = "stack " + `gap-${/*gap*/ ctx[0]}` + " " + `padding-${/*padding*/ ctx[1]}` + " svelte-ktgev0")) {
+			if (!current || dirty & /*gap, padding*/ 3 && div_class_value !== (div_class_value = "stack " + `gap-${/*gap*/ ctx[0]}` + " " + `padding-${/*padding*/ ctx[1]}` + " svelte-1en4j8n")) {
 				attr(div, "class", div_class_value);
 			}
 		},
@@ -519,7 +519,7 @@ function instance$1($$self, $$props, $$invalidate) {
 class Stack extends SvelteComponent {
 	constructor(options) {
 		super();
-		if (!document.getElementById("svelte-ktgev0-style")) add_css$1();
+		if (!document.getElementById("svelte-1en4j8n-style")) add_css$1();
 		init(this, options, instance$1, create_fragment$1, safe_not_equal, { gap: 0, padding: 1 });
 	}
 }
@@ -1629,8 +1629,8 @@ class Link extends SvelteComponent {
 
 function add_css$9() {
 	var style = element("style");
-	style.id = "svelte-1sc1g3a-style";
-	style.textContent = ".code-block.svelte-1sc1g3a{background-color:var(--bolg-text-color, #222222);color:white}.pre.svelte-1sc1g3a{margin:0;padding:var(--bolg-spacer-m, 16px)}.code.svelte-1sc1g3a{font-size:var(--bolg-text-font-size-s, 14px);font-family:var(--bolg-font-family-mono, Menlo, Monaco, Consolas, \"Liberation Mono\", \"Courier New\", monospace);line-height:1.5}";
+	style.id = "svelte-kp1yec-style";
+	style.textContent = ".code-block.svelte-kp1yec{background-color:var(--bolg-text-color, #222222);color:white}.pre.svelte-kp1yec{margin:0;padding:var(--bolg-spacer-m, 16px);box-sizing:border-box;overflow-x:scroll}.code.svelte-kp1yec{font-size:var(--bolg-text-font-size-s, 14px);font-family:var(--bolg-font-family-mono, Menlo, Monaco, Consolas, \"Liberation Mono\", \"Courier New\", monospace);line-height:1.5}";
 	append(document.head, style);
 }
 
@@ -1646,9 +1646,9 @@ function create_fragment$9(ctx) {
 			pre = element("pre");
 			code_1 = element("code");
 			t = text(/*code*/ ctx[0]);
-			attr(code_1, "class", "code svelte-1sc1g3a");
-			attr(pre, "class", "pre svelte-1sc1g3a");
-			attr(div, "class", "code-block svelte-1sc1g3a");
+			attr(code_1, "class", "code svelte-kp1yec");
+			attr(pre, "class", "pre svelte-kp1yec");
+			attr(div, "class", "code-block svelte-kp1yec");
 		},
 		m(target, anchor) {
 			insert(target, div, anchor);
@@ -1680,7 +1680,7 @@ function instance$9($$self, $$props, $$invalidate) {
 class CodeBlock extends SvelteComponent {
 	constructor(options) {
 		super();
-		if (!document.getElementById("svelte-1sc1g3a-style")) add_css$9();
+		if (!document.getElementById("svelte-kp1yec-style")) add_css$9();
 		init(this, options, instance$9, create_fragment$9, safe_not_equal, { code: 0 });
 	}
 }
