@@ -14,6 +14,7 @@
     display: grid;
     width: 100%;
     box-sizing: border-box;
+    grid-auto-columns: 100%;
   }
   .gap-s {
     gap: $spacer-s;

@@ -4,29 +4,30 @@
   export let tone = 'normal'
   export let message = null
   export let label = null
+  export let rows = 5
   export let value = ''
 </script>
 
 <InputField {label} {message} {tone}>
-  <input class="input {`input-tone-${tone}`}" type="text" bind:value />
+  <textarea class="textarea {`textarea-tone-${tone}`}" type="text" {rows} bind:value></textarea>
 </InputField>
 
 <style lang="scss">
   @import 'variables.scss';
 
-  .input {
+  .textarea {
     width: 100%;
     font-size: 16px;
     padding: $spacer-s;
     box-sizing: border-box;
 
-    &.input-tone-normal {
+    &.textarea-tone-normal {
       border: solid 1px $border-color;
     }
-    &.input-tone-success {
+    &.textarea-tone-success {
       border: solid 1px $success-color;
     }
-    &.input-tone-critical {
+    &.textarea-tone-critical {
       border: solid 1px $critical-color;
     }
   }

@@ -18,4 +18,7 @@
   <li>
     <Link href="/#/textfield">TextField</Link>
   </li>
+  <li>
+    <Link href="/#/textarea">Textarea</Link>
+  </li>
 </ul>
