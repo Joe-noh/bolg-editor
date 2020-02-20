@@ -10,8 +10,8 @@
 
 <Container padding="m">
   <Stack gap="m">
-    <Textarea label="Textarea" bind:value message="value: {value}" />
-    <Textarea label="Success tone" tone="success" message="Good!" placeholder="with placeholder" value="" />
+    <Textarea label="Textarea" placeholder="placeholder" bind:value message="value: {value}" />
+    <Textarea label="Success tone" tone="success" message="Good!" value="" />
     <Textarea label="Critical tone" tone="critical" message="This cannot be blank!!" />
     <CodeBlock {code} />
   </Stack>
