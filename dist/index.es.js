@@ -1281,12 +1281,12 @@ class InputField extends SvelteComponent {
 
 function add_css$6() {
 	var style = element("style");
-	style.id = "svelte-1ndtjkl-style";
-	style.textContent = ".input.svelte-1ndtjkl{width:100%;font-size:16px;padding:var(--bolg-spacer-s, 8px);box-sizing:border-box}.input.input-tone-normal.svelte-1ndtjkl{border:solid 1px var(--bold-border-color, #888888)}.input.input-tone-success.svelte-1ndtjkl{border:solid 1px var(--bolg-success-color, #48bb78)}.input.input-tone-critical.svelte-1ndtjkl{border:solid 1px var(--bolg-critical-color, #ef3d3d)}";
+	style.id = "svelte-llxeqt-style";
+	style.textContent = ".input.svelte-llxeqt{width:100%;font-size:16px;padding:var(--bolg-spacer-s, 8px);box-sizing:border-box}.input.input-tone-normal.svelte-llxeqt{border:solid 1px var(--bold-border-color, #888888)}.input.input-tone-success.svelte-llxeqt{border:solid 1px var(--bolg-success-color, #48bb78)}.input.input-tone-critical.svelte-llxeqt{border:solid 1px var(--bolg-critical-color, #ef3d3d)}.input.svelte-llxeqt::-webkit-input-placeholder{color:#aaa}.input.svelte-llxeqt::-moz-placeholder{color:#aaa}.input.svelte-llxeqt:-ms-input-placeholder{color:#aaa}.input.svelte-llxeqt::-ms-input-placeholder{color:#aaa}.input.svelte-llxeqt::placeholder{color:#aaa}";
 	append(document.head, style);
 }
 
-// (10:0) <InputField {label} {message} {tone}>
+// (11:0) <InputField {label} {message} {tone}>
 function create_default_slot$1(ctx) {
 	let input;
 	let input_class_value;
@@ -1295,17 +1295,22 @@ function create_default_slot$1(ctx) {
 	return {
 		c() {
 			input = element("input");
-			attr(input, "class", input_class_value = "input " + `input-tone-${/*tone*/ ctx[1]}` + " svelte-1ndtjkl");
+			attr(input, "class", input_class_value = "input " + `input-tone-${/*tone*/ ctx[1]}` + " svelte-llxeqt");
 			attr(input, "type", "text");
-			dispose = listen(input, "input", /*input_input_handler*/ ctx[4]);
+			attr(input, "placeholder", /*placeholder*/ ctx[4]);
+			dispose = listen(input, "input", /*input_input_handler*/ ctx[5]);
 		},
 		m(target, anchor) {
 			insert(target, input, anchor);
 			set_input_value(input, /*value*/ ctx[0]);
 		},
 		p(ctx, dirty) {
-			if (dirty & /*tone*/ 2 && input_class_value !== (input_class_value = "input " + `input-tone-${/*tone*/ ctx[1]}` + " svelte-1ndtjkl")) {
+			if (dirty & /*tone*/ 2 && input_class_value !== (input_class_value = "input " + `input-tone-${/*tone*/ ctx[1]}` + " svelte-llxeqt")) {
 				attr(input, "class", input_class_value);
+			}
+
+			if (dirty & /*placeholder*/ 16) {
+				attr(input, "placeholder", /*placeholder*/ ctx[4]);
 			}
 
 			if (dirty & /*value*/ 1 && input.value !== /*value*/ ctx[0]) {
@@ -1346,7 +1351,7 @@ function create_fragment$6(ctx) {
 			if (dirty & /*message*/ 4) inputfield_changes.message = /*message*/ ctx[2];
 			if (dirty & /*tone*/ 2) inputfield_changes.tone = /*tone*/ ctx[1];
 
-			if (dirty & /*$$scope, tone, value*/ 35) {
+			if (dirty & /*$$scope, tone, placeholder, value*/ 83) {
 				inputfield_changes.$$scope = { dirty, ctx };
 			}
 
@@ -1372,6 +1377,7 @@ function instance$6($$self, $$props, $$invalidate) {
 	let { message = null } = $$props;
 	let { label = null } = $$props;
 	let { value = "" } = $$props;
+	let { placeholder = "" } = $$props;
 
 	function input_input_handler() {
 		value = this.value;
@@ -1383,16 +1389,24 @@ function instance$6($$self, $$props, $$invalidate) {
 		if ("message" in $$props) $$invalidate(2, message = $$props.message);
 		if ("label" in $$props) $$invalidate(3, label = $$props.label);
 		if ("value" in $$props) $$invalidate(0, value = $$props.value);
+		if ("placeholder" in $$props) $$invalidate(4, placeholder = $$props.placeholder);
 	};
 
-	return [value, tone, message, label, input_input_handler];
+	return [value, tone, message, label, placeholder, input_input_handler];
 }
 
 class TextField extends SvelteComponent {
 	constructor(options) {
 		super();
-		if (!document.getElementById("svelte-1ndtjkl-style")) add_css$6();
-		init(this, options, instance$6, create_fragment$6, safe_not_equal, { tone: 1, message: 2, label: 3, value: 0 });
+		if (!document.getElementById("svelte-llxeqt-style")) add_css$6();
+
+		init(this, options, instance$6, create_fragment$6, safe_not_equal, {
+			tone: 1,
+			message: 2,
+			label: 3,
+			value: 0,
+			placeholder: 4
+		});
 	}
 }
 
@@ -1405,7 +1419,7 @@ function add_css$7() {
 	append(document.head, style);
 }
 
-// (11:0) <InputField {label} {message} {tone}>
+// (12:0) <InputField {label} {message} {tone}>
 function create_default_slot$2(ctx) {
 	let textarea;
 	let textarea_class_value;
@@ -1416,8 +1430,9 @@ function create_default_slot$2(ctx) {
 			textarea = element("textarea");
 			attr(textarea, "class", textarea_class_value = "textarea " + `textarea-tone-${/*tone*/ ctx[1]}` + " svelte-f3h6g6");
 			attr(textarea, "type", "text");
+			attr(textarea, "placeholder", /*placeholder*/ ctx[5]);
 			attr(textarea, "rows", /*rows*/ ctx[4]);
-			dispose = listen(textarea, "input", /*textarea_input_handler*/ ctx[5]);
+			dispose = listen(textarea, "input", /*textarea_input_handler*/ ctx[6]);
 		},
 		m(target, anchor) {
 			insert(target, textarea, anchor);
@@ -1426,6 +1441,10 @@ function create_default_slot$2(ctx) {
 		p(ctx, dirty) {
 			if (dirty & /*tone*/ 2 && textarea_class_value !== (textarea_class_value = "textarea " + `textarea-tone-${/*tone*/ ctx[1]}` + " svelte-f3h6g6")) {
 				attr(textarea, "class", textarea_class_value);
+			}
+
+			if (dirty & /*placeholder*/ 32) {
+				attr(textarea, "placeholder", /*placeholder*/ ctx[5]);
 			}
 
 			if (dirty & /*rows*/ 16) {
@@ -1470,7 +1489,7 @@ function create_fragment$7(ctx) {
 			if (dirty & /*message*/ 4) inputfield_changes.message = /*message*/ ctx[2];
 			if (dirty & /*tone*/ 2) inputfield_changes.tone = /*tone*/ ctx[1];
 
-			if (dirty & /*$$scope, tone, rows, value*/ 83) {
+			if (dirty & /*$$scope, tone, placeholder, rows, value*/ 179) {
 				inputfield_changes.$$scope = { dirty, ctx };
 			}
 
@@ -1497,6 +1516,7 @@ function instance$7($$self, $$props, $$invalidate) {
 	let { label = null } = $$props;
 	let { rows = 5 } = $$props;
 	let { value = "" } = $$props;
+	let { placeholder = "" } = $$props;
 
 	function textarea_input_handler() {
 		value = this.value;
@@ -1509,9 +1529,10 @@ function instance$7($$self, $$props, $$invalidate) {
 		if ("label" in $$props) $$invalidate(3, label = $$props.label);
 		if ("rows" in $$props) $$invalidate(4, rows = $$props.rows);
 		if ("value" in $$props) $$invalidate(0, value = $$props.value);
+		if ("placeholder" in $$props) $$invalidate(5, placeholder = $$props.placeholder);
 	};
 
-	return [value, tone, message, label, rows, textarea_input_handler];
+	return [value, tone, message, label, rows, placeholder, textarea_input_handler];
 }
 
 class Textarea extends SvelteComponent {
@@ -1524,7 +1545,8 @@ class Textarea extends SvelteComponent {
 			message: 2,
 			label: 3,
 			rows: 4,
-			value: 0
+			value: 0,
+			placeholder: 5
 		});
 	}
 }

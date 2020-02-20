@@ -5,10 +5,11 @@
   export let message = null
   export let label = null
   export let value = ''
+  export let placeholder = ''
 </script>
 
 <InputField {label} {message} {tone}>
-  <input class="input {`input-tone-${tone}`}" type="text" bind:value />
+  <input class="input {`input-tone-${tone}`}" type="text" {placeholder} bind:value />
 </InputField>
 
 <style lang="scss">
@@ -28,6 +29,10 @@
     }
     &.input-tone-critical {
       border: solid 1px $critical-color;
+    }
+
+    &::placeholder {
+      color: $placeholder-color;
     }
   }
 </style>
