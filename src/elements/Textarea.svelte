@@ -6,10 +6,11 @@
   export let label = null
   export let rows = 5
   export let value = ''
+  export let placeholder = ''
 </script>
 
 <InputField {label} {message} {tone}>
-  <textarea class="textarea {`textarea-tone-${tone}`}" type="text" {rows} bind:value></textarea>
+  <textarea class="textarea {`textarea-tone-${tone}`}" type="text" {placeholder} {rows} bind:value></textarea>
 </InputField>
 
 <style lang="scss">
