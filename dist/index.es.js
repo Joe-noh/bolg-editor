@@ -1281,8 +1281,8 @@ class InputField extends SvelteComponent {
 
 function add_css$6() {
 	var style = element("style");
-	style.id = "svelte-llxeqt-style";
-	style.textContent = ".input.svelte-llxeqt{width:100%;font-size:16px;padding:var(--bolg-spacer-s, 8px);box-sizing:border-box}.input.input-tone-normal.svelte-llxeqt{border:solid 1px var(--bold-border-color, #888888)}.input.input-tone-success.svelte-llxeqt{border:solid 1px var(--bolg-success-color, #48bb78)}.input.input-tone-critical.svelte-llxeqt{border:solid 1px var(--bolg-critical-color, #ef3d3d)}.input.svelte-llxeqt::-webkit-input-placeholder{color:#aaa}.input.svelte-llxeqt::-moz-placeholder{color:#aaa}.input.svelte-llxeqt:-ms-input-placeholder{color:#aaa}.input.svelte-llxeqt::-ms-input-placeholder{color:#aaa}.input.svelte-llxeqt::placeholder{color:#aaa}";
+	style.id = "svelte-6p43b2-style";
+	style.textContent = ".input.svelte-6p43b2{width:100%;font-size:16px;padding:var(--bolg-spacer-s, 8px);box-sizing:border-box}.input.input-tone-normal.svelte-6p43b2{border:solid 1px var(--bold-border-color, #888888)}.input.input-tone-success.svelte-6p43b2{border:solid 1px var(--bolg-success-color, #48bb78)}.input.input-tone-critical.svelte-6p43b2{border:solid 1px var(--bolg-critical-color, #ef3d3d)}.input.svelte-6p43b2::-webkit-input-placeholder{color:var(--bolg-placeholder-color, #aaaaaa)}.input.svelte-6p43b2::-moz-placeholder{color:var(--bolg-placeholder-color, #aaaaaa)}.input.svelte-6p43b2:-ms-input-placeholder{color:var(--bolg-placeholder-color, #aaaaaa)}.input.svelte-6p43b2::-ms-input-placeholder{color:var(--bolg-placeholder-color, #aaaaaa)}.input.svelte-6p43b2::placeholder{color:var(--bolg-placeholder-color, #aaaaaa)}";
 	append(document.head, style);
 }
 
@@ -1295,7 +1295,7 @@ function create_default_slot$1(ctx) {
 	return {
 		c() {
 			input = element("input");
-			attr(input, "class", input_class_value = "input " + `input-tone-${/*tone*/ ctx[1]}` + " svelte-llxeqt");
+			attr(input, "class", input_class_value = "input " + `input-tone-${/*tone*/ ctx[1]}` + " svelte-6p43b2");
 			attr(input, "type", "text");
 			attr(input, "placeholder", /*placeholder*/ ctx[4]);
 			dispose = listen(input, "input", /*input_input_handler*/ ctx[5]);
@@ -1305,7 +1305,7 @@ function create_default_slot$1(ctx) {
 			set_input_value(input, /*value*/ ctx[0]);
 		},
 		p(ctx, dirty) {
-			if (dirty & /*tone*/ 2 && input_class_value !== (input_class_value = "input " + `input-tone-${/*tone*/ ctx[1]}` + " svelte-llxeqt")) {
+			if (dirty & /*tone*/ 2 && input_class_value !== (input_class_value = "input " + `input-tone-${/*tone*/ ctx[1]}` + " svelte-6p43b2")) {
 				attr(input, "class", input_class_value);
 			}
 
@@ -1398,7 +1398,7 @@ function instance$6($$self, $$props, $$invalidate) {
 class TextField extends SvelteComponent {
 	constructor(options) {
 		super();
-		if (!document.getElementById("svelte-llxeqt-style")) add_css$6();
+		if (!document.getElementById("svelte-6p43b2-style")) add_css$6();
 
 		init(this, options, instance$6, create_fragment$6, safe_not_equal, {
 			tone: 1,
