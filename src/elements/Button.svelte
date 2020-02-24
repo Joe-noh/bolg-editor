@@ -2,9 +2,15 @@
   export let tone = 'info'
   export let type = 'filled'
   export let disabled = false
+  export let icon = null
 </script>
 
 <button on:click class="button {`tone-${tone}`} {`type-${type}`}" {disabled}>
+  {#if icon}
+    <span class="icon {`tone-${tone}`}">
+      <svelte:component this="{icon}" />
+    </span>
+  {/if}
   <slot />
 </button>
 
@@ -18,6 +24,8 @@
     font-size: 14px;
     padding: 8px 16px;
     min-width: 100px;
+    display: flex;
+    align-items: center;
   }
 
   .type-filled {
@@ -52,6 +60,17 @@
       background-color: $disabled-color;
       border: solid 2px $disabled-color;
     }
+
+    .icon {
+      &.tone-info,
+      &.tone-success,
+      &.tone-critical {
+        fill: white;
+      }
+      &.tone-warning {
+        fill: $main-text-color;
+      }
+    }
   }
 
   .type-outlined {
@@ -81,5 +100,27 @@
       color: $disabled-color;
       border: solid 2px $disabled-color;
     }
+
+    .icon {
+      &.tone-info {
+        fill: $info-color;
+      }
+      &.tone-success {
+        fill: $success-color;
+      }
+      &.tone-warning {
+        fill: $warning-color;
+      }
+      &.tone-critical {
+        fill: $critical-color;
+      }
+    }
+  }
+
+  .icon {
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    margin-right: $spacer-xs;
   }
 </style>

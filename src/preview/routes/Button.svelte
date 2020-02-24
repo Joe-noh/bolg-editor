@@ -1,4 +1,5 @@
 <script>
+  import { GithubIcon, AlertCircleOutlineIcon } from 'svelte-eva-icons'
   import { Container, Stack, Button, CodeBlock } from '../../'
 
   let message = ''
@@ -6,6 +7,9 @@
 <Button tone="info" type="filled">Press</Button>
 <Button tone="critical" type="outlined">Press</Button>
 <Button disabled>Disabled</Button>
+
+<!-- svelte-eva-icons supported -->
+<Button tone="info" type="filled" icon="{EditIcon}">Edit</Button>
   `.trim()
 
   function show(msg) {
@@ -74,6 +78,15 @@
       </span>
       <span>
         <Button disabled tone="critical" type="outlined">Disabled outlined critical</Button>
+      </span>
+    </Stack>
+
+    <Stack gap="s">
+      <span>
+        <Button tone="info" type="filled" icon="{GithubIcon}" on:click="{show('Filled info with icon clicked')}">GitHub</Button>
+      </span>
+      <span>
+        <Button tone="critical" type="outlined" icon="{AlertCircleOutlineIcon}" on:click="{show('Outlined critical with icon clicked')}">Watch out!</Button>
       </span>
     </Stack>
 
