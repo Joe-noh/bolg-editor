@@ -18,6 +18,8 @@
     font-size: 14px;
     padding: 8px 16px;
     min-width: 100px;
+    display: flex;
+    align-items: center;
   }
 
   .type-filled {
