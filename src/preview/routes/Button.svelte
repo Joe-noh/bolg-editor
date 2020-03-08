@@ -74,7 +74,7 @@
         <Button disabled tone="warning" type="filled">Disabled filled warning</Button>
       </span>
       <span>
-        <Button disabled tone="critical" type="filled">Disabled filled critical</Button>
+        <Button disabled tone="critical" icon="{AlertCircleOutlineIcon}" type="filled">Disabled filled critical</Button>
       </span>
     </Stack>
 
@@ -89,7 +89,7 @@
         <Button disabled tone="warning" type="outlined">Disabled outlined warning</Button>
       </span>
       <span>
-        <Button disabled tone="critical" type="outlined">Disabled outlined critical</Button>
+        <Button disabled tone="critical" icon="{AlertCircleOutlineIcon}" type="outlined">Disabled outlined critical</Button>
       </span>
     </Stack>
 
