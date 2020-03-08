@@ -4,7 +4,7 @@
 
   let message = ''
   const code = `
-<Button tone="info" type="filled">Press</Button>
+<Button tone="info" type="filled" size="m">Press</Button>
 <Button tone="critical" type="outlined">Press</Button>
 <Button disabled>Disabled</Button>
 
@@ -53,6 +53,18 @@
 
     <Stack gap="s">
       <span>
+        <Button tone="info" type="filled" size="s">Small</Button>
+      </span>
+      <span>
+        <Button tone="info" type="filled" size="m">Medium</Button>
+      </span>
+      <span>
+        <Button tone="info" type="filled" size="l">Large</Button>
+      </span>
+    </Stack>
+
+    <Stack gap="s">
+      <span>
         <Button disabled tone="info" type="filled">Disabled filled info</Button>
       </span>
       <span>
@@ -87,6 +99,18 @@
       </span>
       <span>
         <Button tone="critical" type="outlined" icon="{AlertCircleOutlineIcon}" on:click="{show('Outlined critical with icon clicked')}">Watch out!</Button>
+      </span>
+    </Stack>
+
+    <Stack gap="s">
+      <span>
+        <Button tone="info" type="filled" icon="{GithubIcon}" size="s">Small with icon</Button>
+      </span>
+      <span>
+        <Button tone="info" type="filled" icon="{GithubIcon}" size="m">Medium with icon</Button>
+      </span>
+      <span>
+        <Button tone="info" type="filled" icon="{GithubIcon}" size="l">Large with icon</Button>
       </span>
     </Stack>
 
