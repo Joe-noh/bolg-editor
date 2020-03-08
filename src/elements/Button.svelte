@@ -8,7 +8,7 @@
 
 <button on:click class="button {`tone-${tone}`} {`type-${type}`} {`size-${size}`}" {disabled}>
   {#if icon}
-    <span class="icon {`tone-${tone}`} {`type-${type}`} {`size-${size}`}">
+    <span class="icon {`tone-${tone}`} {`type-${type}`} {`size-${size}`} {disabled && 'disabled'}">
       <svelte:component this="{icon}" />
     </span>
   {/if}
@@ -117,6 +117,13 @@
       fill: $main-text-color;
     }
 
+    &.type-filled.tone-info.disabled,
+    &.type-filled.tone-success.disabled,
+    &.type-filled.tone-warning.disabled,
+    &.type-filled.tone-critical.disabled {
+      fill: white;
+    }
+
     &.type-outlined.tone-info {
       fill: $info-color;
     }
@@ -128,6 +135,13 @@
     }
     &.type-outlined.tone-critical {
       fill: $critical-color;
+    }
+
+    &.type-outlined.tone-info.disabled,
+    &.type-outlined.tone-success.disabled,
+    &.type-outlined.tone-warning.disabled,
+    &.type-outlined.tone-critical.disabled {
+      fill: $disabled-color;
     }
 
     &.size-s {
