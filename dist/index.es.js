@@ -922,17 +922,17 @@ class Heading extends SvelteComponent {
 
 function add_css$4() {
 	var style = element("style");
-	style.id = "svelte-1rpjztc-style";
-	style.textContent = ".button.svelte-1rpjztc.svelte-1rpjztc{cursor:pointer;border:none;font-weight:500;font-size:14px;padding:8px 16px;min-width:100px;display:flex;align-items:center}.type-filled.svelte-1rpjztc.svelte-1rpjztc{border:none}.type-filled.tone-info.svelte-1rpjztc.svelte-1rpjztc{color:white;background-color:var(--bolg-info-color, #209cee);border:solid 2px var(--bolg-info-color, #209cee)}.type-filled.tone-success.svelte-1rpjztc.svelte-1rpjztc{color:white;background-color:var(--bolg-success-color, #48bb78);border:solid 2px var(--bolg-success-color, #48bb78)}.type-filled.tone-warning.svelte-1rpjztc.svelte-1rpjztc{color:var(--bolg-text-color, #222222);background-color:var(--bolg-warning-color, #f9db59);border:solid 2px var(--bolg-warning-color, #f9db59)}.type-filled.tone-critical.svelte-1rpjztc.svelte-1rpjztc{color:white;background-color:var(--bolg-critical-color, #ef3d3d);border:solid 2px var(--bolg-critical-color, #ef3d3d)}.type-filled.tone-info.svelte-1rpjztc.svelte-1rpjztc:disabled,.type-filled.tone-success.svelte-1rpjztc.svelte-1rpjztc:disabled,.type-filled.tone-warning.svelte-1rpjztc.svelte-1rpjztc:disabled,.type-filled.tone-critical.svelte-1rpjztc.svelte-1rpjztc:disabled{color:white;background-color:var(--bolg-disabled-color, #999999);border:solid 2px var(--bolg-disabled-color, #999999)}.type-filled.svelte-1rpjztc .icon.tone-info.svelte-1rpjztc,.type-filled.svelte-1rpjztc .icon.tone-success.svelte-1rpjztc,.type-filled.svelte-1rpjztc .icon.tone-critical.svelte-1rpjztc{fill:white}.type-filled.svelte-1rpjztc .icon.tone-warning.svelte-1rpjztc{fill:var(--bolg-text-color, #222222)}.type-outlined.svelte-1rpjztc.svelte-1rpjztc{background-color:white}.type-outlined.tone-info.svelte-1rpjztc.svelte-1rpjztc{color:var(--bolg-info-color, #209cee);border:solid 2px var(--bolg-info-color, #209cee)}.type-outlined.tone-success.svelte-1rpjztc.svelte-1rpjztc{color:var(--bolg-success-color, #48bb78);border:solid 2px var(--bolg-success-color, #48bb78)}.type-outlined.tone-warning.svelte-1rpjztc.svelte-1rpjztc{color:var(--bolg-warning-color, #f9db59);border:solid 2px var(--bolg-warning-color, #f9db59)}.type-outlined.tone-critical.svelte-1rpjztc.svelte-1rpjztc{color:var(--bolg-critical-color, #ef3d3d);border:solid 2px var(--bolg-critical-color, #ef3d3d)}.type-outlined.tone-info.svelte-1rpjztc.svelte-1rpjztc:disabled,.type-outlined.tone-success.svelte-1rpjztc.svelte-1rpjztc:disabled,.type-outlined.tone-warning.svelte-1rpjztc.svelte-1rpjztc:disabled,.type-outlined.tone-critical.svelte-1rpjztc.svelte-1rpjztc:disabled{color:var(--bolg-disabled-color, #999999);border:solid 2px var(--bolg-disabled-color, #999999)}.type-outlined.svelte-1rpjztc .icon.tone-info.svelte-1rpjztc{fill:var(--bolg-info-color, #209cee)}.type-outlined.svelte-1rpjztc .icon.tone-success.svelte-1rpjztc{fill:var(--bolg-success-color, #48bb78)}.type-outlined.svelte-1rpjztc .icon.tone-warning.svelte-1rpjztc{fill:var(--bolg-warning-color, #f9db59)}.type-outlined.svelte-1rpjztc .icon.tone-critical.svelte-1rpjztc{fill:var(--bolg-critical-color, #ef3d3d)}.icon.svelte-1rpjztc.svelte-1rpjztc{width:16px;height:16px;display:inline-block;margin-right:var(--bolg-spacer-xs, 4px)}";
+	style.id = "svelte-1cx6v9o-style";
+	style.textContent = ".button.svelte-1cx6v9o{cursor:pointer;border:none;font-weight:500;display:flex;align-items:center;justify-content:center}.button.type-filled.svelte-1cx6v9o{border:none}.button.type-filled.tone-info.svelte-1cx6v9o{color:white;background-color:var(--bolg-info-color, #209cee);border:solid 2px var(--bolg-info-color, #209cee)}.button.type-filled.tone-success.svelte-1cx6v9o{color:white;background-color:var(--bolg-success-color, #48bb78);border:solid 2px var(--bolg-success-color, #48bb78)}.button.type-filled.tone-warning.svelte-1cx6v9o{color:var(--bolg-text-color, #222222);background-color:var(--bolg-warning-color, #f9db59);border:solid 2px var(--bolg-warning-color, #f9db59)}.button.type-filled.tone-critical.svelte-1cx6v9o{color:white;background-color:var(--bolg-critical-color, #ef3d3d);border:solid 2px var(--bolg-critical-color, #ef3d3d)}.button.type-filled.tone-info.svelte-1cx6v9o:disabled,.button.type-filled.tone-success.svelte-1cx6v9o:disabled,.button.type-filled.tone-warning.svelte-1cx6v9o:disabled,.button.type-filled.tone-critical.svelte-1cx6v9o:disabled{color:white;background-color:var(--bolg-disabled-color, #999999);border:solid 2px var(--bolg-disabled-color, #999999)}.button.type-outlined.svelte-1cx6v9o{background-color:white}.button.type-outlined.tone-info.svelte-1cx6v9o{color:var(--bolg-info-color, #209cee);border:solid 2px var(--bolg-info-color, #209cee)}.button.type-outlined.tone-success.svelte-1cx6v9o{color:var(--bolg-success-color, #48bb78);border:solid 2px var(--bolg-success-color, #48bb78)}.button.type-outlined.tone-warning.svelte-1cx6v9o{color:var(--bolg-warning-color, #f9db59);border:solid 2px var(--bolg-warning-color, #f9db59)}.button.type-outlined.tone-critical.svelte-1cx6v9o{color:var(--bolg-critical-color, #ef3d3d);border:solid 2px var(--bolg-critical-color, #ef3d3d)}.button.type-outlined.tone-info.svelte-1cx6v9o:disabled,.button.type-outlined.tone-success.svelte-1cx6v9o:disabled,.button.type-outlined.tone-warning.svelte-1cx6v9o:disabled,.button.type-outlined.tone-critical.svelte-1cx6v9o:disabled{color:var(--bolg-disabled-color, #999999);border:solid 2px var(--bolg-disabled-color, #999999)}.button.size-s.svelte-1cx6v9o{font-size:var(--bolg-text-font-size-s, 14px);padding:var(--bolg-spacer-xs, 4px) var(--bolg-spacer-s, 8px)}.button.size-m.svelte-1cx6v9o{font-size:var(--bolg-text-font-size-s, 14px);padding:var(--bolg-spacer-s, 8px) var(--bolg-spacer-m, 16px)}.button.size-l.svelte-1cx6v9o{font-size:var(--bolg-text-font-size-l, 18px);padding:var(--bolg-spacer-m, 16px) var(--bolg-spacer-l, 24px)}.icon.svelte-1cx6v9o{display:inline-block}.icon.type-filled.tone-info.svelte-1cx6v9o,.icon.type-filled.tone-success.svelte-1cx6v9o,.icon.type-filled.tone-critical.svelte-1cx6v9o{fill:white}.icon.type-filled.tone-warning.svelte-1cx6v9o{fill:var(--bolg-text-color, #222222)}.icon.type-filled.tone-info.disabled.svelte-1cx6v9o,.icon.type-filled.tone-success.disabled.svelte-1cx6v9o,.icon.type-filled.tone-warning.disabled.svelte-1cx6v9o,.icon.type-filled.tone-critical.disabled.svelte-1cx6v9o{fill:white}.icon.type-outlined.tone-info.svelte-1cx6v9o{fill:var(--bolg-info-color, #209cee)}.icon.type-outlined.tone-success.svelte-1cx6v9o{fill:var(--bolg-success-color, #48bb78)}.icon.type-outlined.tone-warning.svelte-1cx6v9o{fill:var(--bolg-warning-color, #f9db59)}.icon.type-outlined.tone-critical.svelte-1cx6v9o{fill:var(--bolg-critical-color, #ef3d3d)}.icon.type-outlined.tone-info.disabled.svelte-1cx6v9o,.icon.type-outlined.tone-success.disabled.svelte-1cx6v9o,.icon.type-outlined.tone-warning.disabled.svelte-1cx6v9o,.icon.type-outlined.tone-critical.disabled.svelte-1cx6v9o{fill:var(--bolg-disabled-color, #999999)}.icon.size-s.svelte-1cx6v9o{width:var(--bolg-text-font-size-m, 16px);height:var(--bolg-text-font-size-m, 16px);margin-right:var(--bolg-spacer-xs, 4px)}.icon.size-m.svelte-1cx6v9o{width:var(--bolg-text-font-size-m, 16px);height:var(--bolg-text-font-size-m, 16px);margin-right:var(--bolg-spacer-xs, 4px)}.icon.size-l.svelte-1cx6v9o{width:var(--bolg-text-font-size-l, 18px);height:var(--bolg-text-font-size-l, 18px);margin-right:var(--bolg-spacer-s, 8px)}";
 	append(document.head, style);
 }
 
-// (9:2) {#if icon}
+// (10:2) {#if icon}
 function create_if_block$1(ctx) {
 	let span;
 	let span_class_value;
 	let current;
-	var switch_value = /*icon*/ ctx[3];
+	var switch_value = /*icon*/ ctx[4];
 
 	function switch_props(ctx) {
 		return {};
@@ -946,7 +946,7 @@ function create_if_block$1(ctx) {
 		c() {
 			span = element("span");
 			if (switch_instance) create_component(switch_instance.$$.fragment);
-			attr(span, "class", span_class_value = "icon " + `tone-${/*tone*/ ctx[0]}` + " svelte-1rpjztc");
+			attr(span, "class", span_class_value = "icon " + `tone-${/*tone*/ ctx[0]}` + " " + `type-${/*type*/ ctx[1]}` + " " + `size-${/*size*/ ctx[2]}` + " " + (/*disabled*/ ctx[3] && "disabled") + " svelte-1cx6v9o");
 		},
 		m(target, anchor) {
 			insert(target, span, anchor);
@@ -958,7 +958,7 @@ function create_if_block$1(ctx) {
 			current = true;
 		},
 		p(ctx, dirty) {
-			if (switch_value !== (switch_value = /*icon*/ ctx[3])) {
+			if (switch_value !== (switch_value = /*icon*/ ctx[4])) {
 				if (switch_instance) {
 					group_outros();
 					const old_component = switch_instance;
@@ -980,7 +980,7 @@ function create_if_block$1(ctx) {
 				}
 			}
 
-			if (!current || dirty & /*tone*/ 1 && span_class_value !== (span_class_value = "icon " + `tone-${/*tone*/ ctx[0]}` + " svelte-1rpjztc")) {
+			if (!current || dirty & /*tone, type, size, disabled*/ 15 && span_class_value !== (span_class_value = "icon " + `tone-${/*tone*/ ctx[0]}` + " " + `type-${/*type*/ ctx[1]}` + " " + `size-${/*size*/ ctx[2]}` + " " + (/*disabled*/ ctx[3] && "disabled") + " svelte-1cx6v9o")) {
 				attr(span, "class", span_class_value);
 			}
 		},
@@ -1006,9 +1006,9 @@ function create_fragment$4(ctx) {
 	let button_class_value;
 	let current;
 	let dispose;
-	let if_block = /*icon*/ ctx[3] && create_if_block$1(ctx);
-	const default_slot_template = /*$$slots*/ ctx[5].default;
-	const default_slot = create_slot(default_slot_template, ctx, /*$$scope*/ ctx[4], null);
+	let if_block = /*icon*/ ctx[4] && create_if_block$1(ctx);
+	const default_slot_template = /*$$slots*/ ctx[6].default;
+	const default_slot = create_slot(default_slot_template, ctx, /*$$scope*/ ctx[5], null);
 
 	return {
 		c() {
@@ -1016,9 +1016,9 @@ function create_fragment$4(ctx) {
 			if (if_block) if_block.c();
 			t = space();
 			if (default_slot) default_slot.c();
-			attr(button, "class", button_class_value = "button " + `tone-${/*tone*/ ctx[0]}` + " " + `type-${/*type*/ ctx[1]}` + " svelte-1rpjztc");
-			button.disabled = /*disabled*/ ctx[2];
-			dispose = listen(button, "click", /*click_handler*/ ctx[6]);
+			attr(button, "class", button_class_value = "button " + `tone-${/*tone*/ ctx[0]}` + " " + `type-${/*type*/ ctx[1]}` + " " + `size-${/*size*/ ctx[2]}` + " svelte-1cx6v9o");
+			button.disabled = /*disabled*/ ctx[3];
+			dispose = listen(button, "click", /*click_handler*/ ctx[7]);
 		},
 		m(target, anchor) {
 			insert(target, button, anchor);
@@ -1032,7 +1032,7 @@ function create_fragment$4(ctx) {
 			current = true;
 		},
 		p(ctx, [dirty]) {
-			if (/*icon*/ ctx[3]) {
+			if (/*icon*/ ctx[4]) {
 				if (if_block) {
 					if_block.p(ctx, dirty);
 					transition_in(if_block, 1);
@@ -1052,16 +1052,16 @@ function create_fragment$4(ctx) {
 				check_outros();
 			}
 
-			if (default_slot && default_slot.p && dirty & /*$$scope*/ 16) {
-				default_slot.p(get_slot_context(default_slot_template, ctx, /*$$scope*/ ctx[4], null), get_slot_changes(default_slot_template, /*$$scope*/ ctx[4], dirty, null));
+			if (default_slot && default_slot.p && dirty & /*$$scope*/ 32) {
+				default_slot.p(get_slot_context(default_slot_template, ctx, /*$$scope*/ ctx[5], null), get_slot_changes(default_slot_template, /*$$scope*/ ctx[5], dirty, null));
 			}
 
-			if (!current || dirty & /*tone, type*/ 3 && button_class_value !== (button_class_value = "button " + `tone-${/*tone*/ ctx[0]}` + " " + `type-${/*type*/ ctx[1]}` + " svelte-1rpjztc")) {
+			if (!current || dirty & /*tone, type, size*/ 7 && button_class_value !== (button_class_value = "button " + `tone-${/*tone*/ ctx[0]}` + " " + `type-${/*type*/ ctx[1]}` + " " + `size-${/*size*/ ctx[2]}` + " svelte-1cx6v9o")) {
 				attr(button, "class", button_class_value);
 			}
 
-			if (!current || dirty & /*disabled*/ 4) {
-				button.disabled = /*disabled*/ ctx[2];
+			if (!current || dirty & /*disabled*/ 8) {
+				button.disabled = /*disabled*/ ctx[3];
 			}
 		},
 		i(local) {
@@ -1087,6 +1087,7 @@ function create_fragment$4(ctx) {
 function instance$4($$self, $$props, $$invalidate) {
 	let { tone = "info" } = $$props;
 	let { type = "filled" } = $$props;
+	let { size = "m" } = $$props;
 	let { disabled = false } = $$props;
 	let { icon = null } = $$props;
 	let { $$slots = {}, $$scope } = $$props;
@@ -1098,19 +1099,27 @@ function instance$4($$self, $$props, $$invalidate) {
 	$$self.$set = $$props => {
 		if ("tone" in $$props) $$invalidate(0, tone = $$props.tone);
 		if ("type" in $$props) $$invalidate(1, type = $$props.type);
-		if ("disabled" in $$props) $$invalidate(2, disabled = $$props.disabled);
-		if ("icon" in $$props) $$invalidate(3, icon = $$props.icon);
-		if ("$$scope" in $$props) $$invalidate(4, $$scope = $$props.$$scope);
+		if ("size" in $$props) $$invalidate(2, size = $$props.size);
+		if ("disabled" in $$props) $$invalidate(3, disabled = $$props.disabled);
+		if ("icon" in $$props) $$invalidate(4, icon = $$props.icon);
+		if ("$$scope" in $$props) $$invalidate(5, $$scope = $$props.$$scope);
 	};
 
-	return [tone, type, disabled, icon, $$scope, $$slots, click_handler];
+	return [tone, type, size, disabled, icon, $$scope, $$slots, click_handler];
 }
 
 class Button extends SvelteComponent {
 	constructor(options) {
 		super();
-		if (!document.getElementById("svelte-1rpjztc-style")) add_css$4();
-		init(this, options, instance$4, create_fragment$4, safe_not_equal, { tone: 0, type: 1, disabled: 2, icon: 3 });
+		if (!document.getElementById("svelte-1cx6v9o-style")) add_css$4();
+
+		init(this, options, instance$4, create_fragment$4, safe_not_equal, {
+			tone: 0,
+			type: 1,
+			size: 2,
+			disabled: 3,
+			icon: 4
+		});
 	}
 }
 
